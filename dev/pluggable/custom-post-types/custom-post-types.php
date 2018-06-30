@@ -55,3 +55,7 @@ function eventos_init() {
 }
 
 add_action( 'init', 'eventos_init' );
+
+/**
+ * Clubes
+ */
