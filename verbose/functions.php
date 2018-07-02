@@ -280,6 +280,8 @@ function liceoparaiso_styles() {
 	wp_register_style( 'liceoparaiso-sidebar', get_theme_file_uri( '/css/sidebar.css' ), array(), '20180514' );
 	wp_register_style( 'liceoparaiso-widgets', get_theme_file_uri( '/css/widgets.css' ), array(), '20180514' );
 	wp_register_style( 'liceoparaiso-front-page', get_theme_file_uri( '/css/front-page.css' ), array(), '20180514' );
+	wp_register_style( 'liceoparaiso-galleria', get_theme_file_uri( '/css/galleria.css' ), array(), '20180701' );
+
 }
 add_action( 'wp_enqueue_scripts', 'liceoparaiso_styles' );
 
@@ -307,6 +309,34 @@ function liceoparaiso_scripts() {
 		if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 			wp_enqueue_script( 'comment-reply' );
 		}
+
+		// Enqueue the galleria script.
+		wp_enqueue_script( 'liceoparaiso-galleria', get_theme_file_uri( '/js/galleria.js' ), array(), '20180701', false );
+		wp_script_add_data( 'liceoparaiso-galleria', 'async', true );
+
+		// Enqueue AMP script - Carousel Component.
+		wp_enqueue_script( 'amp', 'https://cdn.ampproject.org/v0.js' );
+		wp_script_add_data( 'amp', 'async', true );
+
+		// Enqueue AMP script - Carousel Component.
+		wp_enqueue_script( 'amp-carousel', 'https://cdn.ampproject.org/v0/amp-carousel-0.1.js' );
+		wp_script_add_data( 'amp-carousel', 'async', true );
+
+		// Enqueue AMP script - amp-fit-text component.
+		wp_enqueue_script( 'amp-fit-text', 'https://cdn.ampproject.org/v0/amp-fit-text-0.1.js' );
+		wp_script_add_data( 'amp-fit-text', 'async', true );
+
+		// Enqueue AMP script - amp-selector component.
+		wp_enqueue_script( 'amp-selector', 'https://cdn.ampproject.org/v0/amp-selector-0.1.js' );
+		wp_script_add_data( 'amp-selector', 'async', true );
+
+		// Enqueue AMP script - amp-bind component.
+		wp_enqueue_script( 'amp-bind', 'https://cdn.ampproject.org/v0/amp-bind-0.1.js' );
+		wp_script_add_data( 'amp-bind', 'async', true );
+
+		// Enqueue AMP script - amp-iframe component.
+		wp_enqueue_script( 'amp-iframe', 'https://cdn.ampproject.org/v0/amp-iframe-0.1.js' );
+		wp_script_add_data( 'amp-iframe', 'async', true );
 	}
 
 }
@@ -345,7 +375,6 @@ require get_template_directory() . '/inc/customizer.php';
 require get_template_directory() . '/pluggable/lazyload/lazyload.php';
 
 /**
- * Custom post types para el Liceo
+ * Implementa las funciones custom del template.
  */
-
-require get_template_directory() . '/pluggable/custom-post-types/custom-post-types.php';
+require get_template_directory() . '/pluggable/functions/funciones-paraiso.php';
