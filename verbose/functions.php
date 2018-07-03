@@ -315,28 +315,28 @@ function liceoparaiso_scripts() {
 		wp_script_add_data( 'liceoparaiso-galleria', 'async', true );
 
 		// Enqueue AMP script - Carousel Component.
-		wp_enqueue_script( 'amp', 'https://cdn.ampproject.org/v0.js' );
-		wp_script_add_data( 'amp', 'async', true );
+		//wp_enqueue_script( 'amp', 'https://cdn.ampproject.org/v0.js' );
+		//wp_script_add_data( 'amp', 'async', true );
 
 		// Enqueue AMP script - Carousel Component.
-		wp_enqueue_script( 'amp-carousel', 'https://cdn.ampproject.org/v0/amp-carousel-0.1.js' );
-		wp_script_add_data( 'amp-carousel', 'async', true );
+		//wp_enqueue_script( 'amp-carousel', 'https://cdn.ampproject.org/v0/amp-carousel-0.1.js' );
+		//wp_script_add_data( 'amp-carousel', 'async', true );
 
 		// Enqueue AMP script - amp-fit-text component.
-		wp_enqueue_script( 'amp-fit-text', 'https://cdn.ampproject.org/v0/amp-fit-text-0.1.js' );
-		wp_script_add_data( 'amp-fit-text', 'async', true );
+		//wp_enqueue_script( 'amp-fit-text', 'https://cdn.ampproject.org/v0/amp-fit-text-0.1.js' );
+		//wp_script_add_data( 'amp-fit-text', 'async', true );
 
 		// Enqueue AMP script - amp-selector component.
-		wp_enqueue_script( 'amp-selector', 'https://cdn.ampproject.org/v0/amp-selector-0.1.js' );
-		wp_script_add_data( 'amp-selector', 'async', true );
+		//wp_enqueue_script( 'amp-selector', 'https://cdn.ampproject.org/v0/amp-selector-0.1.js' );
+		//wp_script_add_data( 'amp-selector', 'async', true );
 
 		// Enqueue AMP script - amp-bind component.
-		wp_enqueue_script( 'amp-bind', 'https://cdn.ampproject.org/v0/amp-bind-0.1.js' );
-		wp_script_add_data( 'amp-bind', 'async', true );
+		//wp_enqueue_script( 'amp-bind', 'https://cdn.ampproject.org/v0/amp-bind-0.1.js' );
+		//wp_script_add_data( 'amp-bind', 'async', true );
 
 		// Enqueue AMP script - amp-iframe component.
-		wp_enqueue_script( 'amp-iframe', 'https://cdn.ampproject.org/v0/amp-iframe-0.1.js' );
-		wp_script_add_data( 'amp-iframe', 'async', true );
+		//wp_enqueue_script( 'amp-iframe', 'https://cdn.ampproject.org/v0/amp-iframe-0.1.js' );
+		//wp_script_add_data( 'amp-iframe', 'async', true );
 	}
 
 }

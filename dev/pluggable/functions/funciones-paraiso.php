@@ -54,44 +54,45 @@ function get_custom_image_4( $post_id = '' ) {
 function get_galleria( $post_id ) {
 	$galleria = '
 			<!-- Slideshow container -->
-			<div class="slideshow-container">
+			<div class="lp-slideshow-container">
 			
 			  <!-- Full-width images with number and caption text -->
-			  <div class="mySlides fade">
-				<div class="numbertext">1 / 4</div>
-				<img src="' . get_custom_image_1( $post_id ) . '" style="width:100%">
-				<div class="text">Caption Text</div>
+			  <div class="lp-mySlides lp-fade">
+				<div class="lp-numbertext">1 / 4</div>
+				<img src="' . get_custom_image_1( $post_id ) . '">
+				<div class="lp-text">Caption Text</div>
 			  </div>
 			
-			  <div class="mySlides fade">
-				<div class="numbertext">2 / 4</div>
-				<img src="' . get_custom_image_2( $post_id ) . '" style="width:100%">
-				<div class="text">Caption Two</div>
+			  <div class="lp-mySlides lp-fade">
+				<div class="lp-numbertext">2 / 4</div>
+				<img src="' . get_custom_image_2( $post_id ) . '">
+				<div class="lp-text">Caption Two</div>
 			  </div>
 			
-			  <div class="mySlides fade">
-				<div class="numbertext">3 / 4</div>
-				<img src="' . get_custom_image_3( $post_id ) . '" style="width:100%">
-				<div class="text">Caption Three</div>
+			  <div class="lp-mySlides lp-fade">
+				<div class="lp-numbertext">3 / 4</div>
+				<img src="' . get_custom_image_3( $post_id ) . '">
+				<div class="lp-text">Caption Three</div>
 			  </div>
 
-			  <div class="mySlides fade">
-				<div class="numbertext">4 / 4</div>
-				<img src="' . get_custom_image_4( $post_id ) . '" style="width:100%">
-				<div class="text">Caption Four</div>
+			  <div class="lp-mySlides lp-fade">
+				<div class="lp-numbertext">4 / 4</div>
+				<img src="' . get_custom_image_4( $post_id ) . '">
+				<div class="lp-text">Caption Four</div>
 			  </div>
 			
 			  <!-- Next and previous buttons -->
-			  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-			  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+			  <a class="lp-prev" onclick="plusSlides(-1)">&#10094;</a>
+			  <a class="lp-next" onclick="plusSlides(1)">&#10095;</a>
 			</div>
 			<br>
 			
 			<!-- The dots/circles -->
-			<div style="text-align:center">
-			  <span class="dot" onclick="currentSlide(1)"></span>
-			  <span class="dot" onclick="currentSlide(2)"></span>
-			  <span class="dot" onclick="currentSlide(3)"></span>
+			<div class="lp-dots">
+			  <span class="lp-dot" onclick="currentSlide(1)"></span>
+			  <span class="lp-dot" onclick="currentSlide(2)"></span>
+				<span class="lp-dot" onclick="currentSlide(3)"></span>
+				<span class="lp-dot" onclick="currentSlide(4)"></span>
 			</div> 
 	';
 	echo $galleria;
