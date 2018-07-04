@@ -58,27 +58,27 @@ function get_galleria( $post_id ) {
 			
 			  <!-- Full-width images with number and caption text -->
 			  <div class="lp-mySlides lp-fade">
-				<div class="lp-numbertext">1 / 4</div>
-				<img src="' . get_custom_image_1( $post_id ) . '">
-				<div class="lp-text">Caption Text</div>
+					<div class="lp-numbertext">1 / 4</div>
+					<img src="' . get_custom_image_1( $post_id ) . '">
+					<div class="lp-text">Caption Text</div>
 			  </div>
 			
 			  <div class="lp-mySlides lp-fade">
-				<div class="lp-numbertext">2 / 4</div>
-				<img src="' . get_custom_image_2( $post_id ) . '">
-				<div class="lp-text">Caption Two</div>
+					<div class="lp-numbertext">2 / 4</div>
+					<img src="' . get_custom_image_2( $post_id ) . '">
+					<div class="lp-text">Caption Two</div>
 			  </div>
 			
 			  <div class="lp-mySlides lp-fade">
-				<div class="lp-numbertext">3 / 4</div>
-				<img src="' . get_custom_image_3( $post_id ) . '">
-				<div class="lp-text">Caption Three</div>
+					<div class="lp-numbertext">3 / 4</div>
+					<img src="' . get_custom_image_3( $post_id ) . '">
+					<div class="lp-text">Caption Three</div>
 			  </div>
 
 			  <div class="lp-mySlides lp-fade">
-				<div class="lp-numbertext">4 / 4</div>
-				<img src="' . get_custom_image_4( $post_id ) . '">
-				<div class="lp-text">Caption Four</div>
+					<div class="lp-numbertext">4 / 4</div>
+					<img src="' . get_custom_image_4( $post_id ) . '">
+					<div class="lp-text">Caption Four</div>
 			  </div>
 			
 			  <!-- Next and previous buttons -->
