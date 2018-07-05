@@ -622,7 +622,9 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-	color: #0073aa;
+	/* color: #0073aa; */
+	text-decoration: none;
+	color: #3b58b8;
 }
 
 a:visited {
@@ -630,7 +632,8 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-	color: #00a0d2;
+	/* color: #00a0d2; */
+	text-decoration: underline;
 }
 
 a:focus {
@@ -732,6 +735,7 @@ textarea {
 
 .site-header {
 	padding-bottom: 1em;
+	color: #3b58b8!important;
 }
 
 .header-image {
@@ -748,9 +752,13 @@ textarea {
 	margin: 0 auto 1em;
 }
 
+.custom-logo {
+	max-width: 120px;
+}
+
 .site-branding {
 	text-align: center;
-	padding: 60px 0 1.75em;
+	padding: 1.75em 0 1.75em;
 }
 
 .site-title {
@@ -759,7 +767,7 @@ textarea {
 	font-size: 38px;
 	font-weight: bold;
 	line-height: 1.2;
-	color: #333332;
+	/* color: #333332; */
 }
 
 .site-title a {
@@ -774,7 +782,7 @@ textarea {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #5a4141;
+	/* color: #5a4141; */
 }
 
 #header-social {
@@ -787,9 +795,31 @@ textarea {
 	        flex-direction: column;
 }
 
-.facebook-icon {
+#facebook-icon {
 	font-size: 22px;
 	vertical-align: sub;
+	color: #3b5998;
+}
+
+#facebook-fixed {
+	position: fixed;
+	top: 50%;
+	left: 0;
+	font-size: 3em;
+	color: #3b5998;
+}
+
+.social-navigation {
+	font-family: Roboto Condensed,sans-serif;
+}
+
+.social-navigation a {
+	text-decoration: none;
+}
+
+.social-navigation a:hover,
+.social-navigation a:focus {
+	text-decoration: underline;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -803,6 +833,9 @@ textarea {
 		display: flex;
 		-ms-flex-pack: distribute;
 		    justify-content: space-around;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
 	}
 }
 
@@ -836,7 +869,7 @@ textarea {
 	width: 100%;
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
-	color: black;
+	/* color: black; */
 }
 
 .main-navigation a:hover,
