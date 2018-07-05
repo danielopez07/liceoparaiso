@@ -774,7 +774,36 @@ textarea {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #757575;
+	color: #5a4141;
+}
+
+#header-social {
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-box-orient: vertical;
+	-webkit-box-direction: normal;
+	    -ms-flex-direction: column;
+	        flex-direction: column;
+}
+
+.facebook-icon {
+	font-size: 22px;
+	vertical-align: sub;
+}
+
+@media screen and (min-width: 37.5em) {
+	.custom-logo-link {
+		margin: 0;
+	}
+
+	.site-branding {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-ms-flex-pack: distribute;
+		    justify-content: space-around;
+	}
 }
 
 /*--------------------------------------------------------------

@@ -45,6 +45,10 @@
 				<?php if ( $liceoparaiso_description || is_customize_preview() ) : ?>
 					<p class="site-description"><?php echo $liceoparaiso_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
+				<div id="header-social">
+					<p>Iniciar sesión</p>
+					<p><span class="dashicons dashicons-facebook facebook-icon"></span>/liceoparaiso</p>
+				</div>
 			</div><!-- .site-branding -->
 
 			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main menu', 'liceoparaiso' ); ?>"

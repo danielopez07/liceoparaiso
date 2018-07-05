@@ -6,16 +6,26 @@
 
 /* Slideshow container */
 .lp-slideshow-container {
-  max-height: auto;
+  max-height: 200px;
   max-width: 700px;
   position: relative;
   margin: auto;
 }
 
+/* Images inside the Slideshow container */
+.lp-slideshow-container img{
+  height: 200px;
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
 /* Hide the images by default */
 .lp-mySlides {
     display: none;
-} 
+    max-height: 200px;
+    max-width: 700px;
+}
 
 /* Next & previous buttons */
 .lp-prev, .lp-next {

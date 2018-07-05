@@ -765,7 +765,28 @@ textarea {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #757575;
+	color: #5a4141;
+}
+
+#header-social {
+	display: flex;
+	flex-direction: column;
+}
+
+.facebook-icon {
+	font-size: 22px;
+	vertical-align: sub;
+}
+
+@media (--wide-menu-query) {
+	.custom-logo-link {
+		margin: 0;
+	}
+
+	.site-branding {
+		display: flex;
+		justify-content: space-around;
+	}
 }
 
 /*--------------------------------------------------------------
