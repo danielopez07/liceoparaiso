@@ -353,3 +353,14 @@ require get_template_directory() . '/pluggable/lazyload/lazyload.php';
  * Implementa las funciones custom del template.
  */
 require get_template_directory() . '/pluggable/functions/funciones-paraiso.php';
+
+/**
+ * Disponibilizar los dashicons para el frontend
+ */
+
+if ( ! is_admin() ) {
+	function load_dashicons_font() {
+		wp_enqueue_style( 'dashicons' );
+	}
+	add_action( 'wp_enqueue_scripts', 'load_dashicons_font' );
+}

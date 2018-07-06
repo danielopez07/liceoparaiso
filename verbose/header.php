@@ -45,7 +45,12 @@
 				<?php if ( $liceoparaiso_description || is_customize_preview() ) : ?>
 					<p class="site-description"><?php echo $liceoparaiso_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
+				<div id="header-social">
+					<div class="social-navigation"><a href="#"><div class="header-button">Iniciar sesión</div></a></div>
+					<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><p><span class="dashicons dashicons-facebook" id="facebook-icon"></span> /liceoparaiso</p></a></div>
+				</div>
 			</div><!-- .site-branding -->
+			<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><span class="dashicons dashicons-facebook" id="facebook-fixed"></span></a></div>
 
 			<nav id="site-navigation" class="main-navigation" aria-label="<?php esc_attr_e( 'Main menu', 'liceoparaiso' ); ?>"
 				<?php if ( liceoparaiso_is_amp() ) : ?>
@@ -84,5 +89,6 @@
 
 					?>
 				</div>
+				<hr>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
