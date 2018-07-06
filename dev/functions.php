@@ -281,7 +281,6 @@ function wprig_styles() {
 	wp_register_style( 'wprig-widgets', get_theme_file_uri( '/css/widgets.css' ), array(), '20180514' );
 	wp_register_style( 'wprig-front-page', get_theme_file_uri( '/css/front-page.css' ), array(), '20180514' );
 	wp_register_style( 'wprig-galleria', get_theme_file_uri( '/css/galleria.css' ), array(), '20180701' );
-	wp_register_style( 'wprig-bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css', array(), null );
 }
 add_action( 'wp_enqueue_scripts', 'wprig_styles' );
 
@@ -313,18 +312,6 @@ function wprig_scripts() {
 		// Enqueue the galleria script.
 		wp_enqueue_script( 'wprig-galleria', get_theme_file_uri( '/js/galleria.js' ), array(), '20180701', false );
 		wp_script_add_data( 'wprig-galleria', 'async', true );
-
-		// Enqueue the bootstrap js.
-		wp_enqueue_script( 'wprig-bootstrapjs', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js', array(), null, false );
-		wp_script_add_data( 'wprig-bootsrapjs', 'async', true );
-
-		// Enqueue the jquery file.
-		wp_enqueue_script( 'wprig-jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js', array(), null, false );
-		wp_script_add_data( 'wprig-jquery', 'async', true );
-
-		// Enqueue the popper file.
-		wp_enqueue_script( 'wprig-popper', 'https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js', array(), null, false );
-		wp_script_add_data( 'wprig-popper', 'async', true );
 	}
 
 }
