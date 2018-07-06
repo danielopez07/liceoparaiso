@@ -25,7 +25,7 @@ get_header(); ?>
 		 * This call runs only once on index and archive pages.
 		 * At some point, override functionality should be built in similar to the template part below.
 		 */
-		wp_print_styles( array( 'liceoparaiso-content' , 'liceoparaiso-galleria' ) ); // Note: If this was already done it will be skipped.
+		wp_print_styles( array( 'liceoparaiso-content', 'liceoparaiso-bootstrap', 'liceoparaiso-galleria' ) ); // Note: If this was already done it will be skipped.
 
 		/* Display the appropriate header when required. */
 		liceoparaiso_index_header();

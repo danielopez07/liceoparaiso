@@ -97,3 +97,40 @@ function get_galleria( $post_id ) {
 	';
 	echo $galleria;
 }
+
+function get_galleria2( $post_id ) {
+	$galleria = ' 
+	<div id="demo" class="carousel slide" data-ride="carousel">
+
+  <!-- Indicators -->
+  <ul class="carousel-indicators">
+    <li data-target="#demo" data-slide-to="0" class="active"></li>
+    <li data-target="#demo" data-slide-to="1"></li>
+    <li data-target="#demo" data-slide-to="2"></li>
+  </ul>
+  
+  <!-- The slideshow -->
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <img src="' . get_custom_image_1( $post_id ) . '" alt="Los Angeles" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="' . get_custom_image_2( $post_id ) . '" alt="Chicago" width="1100" height="500">
+    </div>
+    <div class="carousel-item">
+      <img src="' . get_custom_image_3( $post_id ) . '" alt="New York" width="1100" height="500">
+    </div>
+  </div>
+  
+  <!-- Left and right controls -->
+  <a class="carousel-control-prev" href="#demo" data-slide="prev">
+    <span class="carousel-control-prev-icon"></span>
+  </a>
+  <a class="carousel-control-next" href="#demo" data-slide="next">
+    <span class="carousel-control-next-icon"></span>
+  </a>
+</div>
+
+	';
+	echo $galleria;
+}

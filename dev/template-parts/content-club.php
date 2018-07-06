@@ -39,7 +39,7 @@
 			//get_custom_image_1( $post->ID );
 		?>
 	</div> 
-	<div class="galleria-club">
+	<div class="galleria-content">
 		<?php
 			get_galleria( $post->ID );
 		?>
