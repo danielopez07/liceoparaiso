@@ -46,7 +46,7 @@
 					<p class="site-description"><?php echo $liceoparaiso_description; /* WPCS: xss ok. */ ?></p>
 				<?php endif; ?>
 				<div id="header-social">
-					<div class="social-navigation"><a href="#"><div class="button">Iniciar sesión</div></a></div>
+					<div class="social-navigation"><a href="#"><div class="header-button">Iniciar sesión</div></a></div>
 					<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><p><span class="dashicons dashicons-facebook" id="facebook-icon"></span> /liceoparaiso</p></a></div>
 				</div>
 			</div><!-- .site-branding -->

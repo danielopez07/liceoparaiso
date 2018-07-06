@@ -627,9 +627,9 @@ a {
 	color: #3b58b8;
 }
 
-a:visited {
+/* a:visited {
 	color: #333;
-}
+} */
 
 a:hover, a:focus, a:active {
 	/* color: #00a0d2; */
@@ -820,6 +820,18 @@ textarea {
 .social-navigation a:hover,
 .social-navigation a:focus {
 	text-decoration: underline;
+}
+
+.header-button {
+	margin: 2px;
+	background-color: orangered;
+	border-radius: 5px;
+	color: white;
+}
+
+.header-button a:hover,
+.header-button a:focus {
+	text-decoration: none;
 }
 
 @media screen and (min-width: 37.5em) {
