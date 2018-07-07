@@ -5,61 +5,57 @@
  * {box-sizing:border-box}
 
  .galleria-content {
-  max-width: 70%;
-  max-height: 60%;
+  max-width: 100%;
+  max-height: 65%;
   margin: auto;
  }
- .carousel-inner img {
-  width: 100%;
-  height: 100%;
-}
-
-
+ 
 
 /* Slideshow container */
 .lp-slideshow-container {
   display: flex;
-  /*flex-direction: row;
-  align-items: center;
-  max-height: 80%;
-  max-width: 90%;*/
-  width: 80%;
+  height: 350px;
+  width: 100%;
   background-color: #000;
   position: relative;
   margin: auto;
 }
 
 /* Images inside the Slideshow container */
-.lp-slideshow-container img{
-  height: 350px;
-  width: auto;
-  /*object-fit: cover;*/
+.lp-mySlides img{
+  max-height: inherit;
+  max-width: 100%;
+  margin: auto;
 }
 
 /* Hide the images by default */
 .lp-mySlides {
     display: none;
-    max-height: 80%;
-    max-width: 90%;
+    max-height: 350px;
+    max-width: 100%;
     position: relative;
     margin: auto;
 }
 
 /* Next & previous buttons */
 .lp-prev, .lp-next {
-  background-color: aqua;
+  background-color: #000;
   cursor: pointer;
   position: absolute;
-  top: 50%;
-  width: auto;
-  margin-top: -30px;
+  height: 100%;
   padding: 1%;
   color: white;
   font-weight: bold;
   font-size: 18px;
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
+  filter: alpha(opacity=70);
 }
+
+.flechita{
+  margin-top: 160px;
+}
+
 
 /* Position the "next button" to the right */
 .lp-next {
@@ -69,7 +65,8 @@
 
 /* On hover, add a black background color with a little bit see-through */
 .lp-prev:hover, .lp-next:hover {
-  background-color: rgba(0,0,0,0.8);
+  color: #3B58B8;
+  text-decoration: none;
 }
 
 /* Caption text */
