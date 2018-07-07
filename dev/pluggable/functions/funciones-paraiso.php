@@ -50,33 +50,59 @@ function get_custom_image_4( $post_id = '' ) {
 		}
 	}
 }
+/*
+function create_img_array( $post_id = '' ) {
+	$img_array = array();
+	if ( get_custom_image_1( $post_id ) ) {
+		array_push( $img_array, get_custom_image_1( $post_id ) );
+	}
+	if ( get_custom_image_2( $post_id ) ) {
+		array_push( $img_array, get_custom_image_2( $post_id ) );
+	}
+	if ( get_custom_image_3( $post_id ) ) {
+		array_push( $img_array, get_custom_image_3( $post_id ) );
+	}
+	if ( get_custom_image_4( $post_id ) ) {
+		array_push( $img_array, get_custom_image_4( $post_id ) );
+	}
+	return( $img_array );
+}*/
 
 function get_galleria( $post_id ) {
 	$galleria = '
-			<!-- Slideshow container -->
-			<div class="lp-slideshow-container">
-			
-			  <!-- Full-width images with number and caption text -->
-			  <div class="lp-mySlides lp-fade">
+	<!-- Slideshow container -->
+	<div class="lp-slideshow-container">
+	
+	<!-- Full-width images with number and caption text -->';
+	if ( get_custom_image_1( $post_id ) ) {
+		$galleria = $galleria . '
+			<div class="lp-mySlides lp-fade">
 					<img src="' . get_custom_image_1( $post_id ) . '">
 					<div class="lp-text">Caption Text</div>
-			  </div>
-			
-			  <div class="lp-mySlides lp-fade">
+			</div>';
+	}
+	if ( get_custom_image_2( $post_id ) ) {
+		$galleria = $galleria . '
+			<div class="lp-mySlides lp-fade">
 					<img src="' . get_custom_image_2( $post_id ) . '">
-					<div class="lp-text">Caption Two</div>
-			  </div>
-			
-			  <div class="lp-mySlides lp-fade">
+					<div class="lp-text">Caption Text</div>
+			</div>';
+	}
+	if ( get_custom_image_3( $post_id ) ) {
+		$galleria = $galleria . '
+			<div class="lp-mySlides lp-fade">
 					<img src="' . get_custom_image_3( $post_id ) . '">
-					<div class="lp-text">Caption Three</div>
-			  </div>
-
-			  <div class="lp-mySlides lp-fade">
+					<div class="lp-text">Caption Text</div>
+			</div>';
+	}
+	if ( get_custom_image_4( $post_id ) ) {
+		$galleria = $galleria . '
+			<div class="lp-mySlides lp-fade">
 					<img src="' . get_custom_image_4( $post_id ) . '">
-					<div class="lp-text">Caption Four</div>
-			  </div>
-			
+					<div class="lp-text">Caption Text</div>
+			</div>';
+	}
+	$galleria = $galleria . '
 			  <!-- Next and previous buttons -->
 			  <a class="lp-prev" onclick="plusSlides(-1)"><div class="flechita">&#10094;</div></a>
 			  <a class="lp-next" onclick="plusSlides(1)"><div class="flechita">&#10095;</div></a>
@@ -88,45 +114,7 @@ function get_galleria( $post_id ) {
 			  <span class="lp-dot" onclick="currentSlide(1)"></span>
 			  <span class="lp-dot" onclick="currentSlide(2)"></span>
 				<span class="lp-dot" onclick="currentSlide(3)"></span>
-				<span class="lp-dot" onclick="currentSlide(4)"></span>
 			</div> 
-	';
-	echo $galleria;
-}
-
-function get_galleria2( $post_id ) {
-	$galleria = ' 
-	<div id="demo" class="carousel slide" data-ride="carousel">
-
-  <!-- Indicators -->
-  <ul class="carousel-indicators">
-    <li data-target="#demo" data-slide-to="0" class="active"></li>
-    <li data-target="#demo" data-slide-to="1"></li>
-    <li data-target="#demo" data-slide-to="2"></li>
-  </ul>
-  
-  <!-- The slideshow -->
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="' . get_custom_image_1( $post_id ) . '" alt="Los Angeles" width="1100" height="500">
-    </div>
-    <div class="carousel-item">
-      <img src="' . get_custom_image_2( $post_id ) . '" alt="Chicago" width="1100" height="500">
-    </div>
-    <div class="carousel-item">
-      <img src="' . get_custom_image_3( $post_id ) . '" alt="New York" width="1100" height="500">
-    </div>
-  </div>
-  
-  <!-- Left and right controls -->
-  <a class="carousel-control-prev" href="#demo" data-slide="prev">
-    <span class="carousel-control-prev-icon"></span>
-  </a>
-  <a class="carousel-control-next" href="#demo" data-slide="next">
-    <span class="carousel-control-next-icon"></span>
-  </a>
-</div>
-
 	';
 	echo $galleria;
 }
