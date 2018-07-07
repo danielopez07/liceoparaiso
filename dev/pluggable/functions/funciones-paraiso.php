@@ -50,25 +50,37 @@ function get_custom_image_4( $post_id = '' ) {
 		}
 	}
 }
-/*
-function create_img_array( $post_id = '' ) {
-	$img_array = array();
-	if ( get_custom_image_1( $post_id ) ) {
-		array_push( $img_array, get_custom_image_1( $post_id ) );
+
+function get_custom_descripcion_1 ( $post_id = '' ){
+	$value = get_field( 'descripcion_imagen1', $post_id );
+	if ($value){
+		return $value;
 	}
-	if ( get_custom_image_2( $post_id ) ) {
-		array_push( $img_array, get_custom_image_2( $post_id ) );
+}
+
+function get_custom_descripcion_2 ( $post_id = '' ){
+	$value = get_field( 'descripcion_imagen2', $post_id );
+	if ( $value ){
+		return $value;
 	}
-	if ( get_custom_image_3( $post_id ) ) {
-		array_push( $img_array, get_custom_image_3( $post_id ) );
+}
+
+function get_custom_descripcion_3 ( $post_id = '' ){
+	$value = get_field( 'descripcion_imagen3', $post_id );
+	if ( $value ){
+		return $value;
 	}
-	if ( get_custom_image_4( $post_id ) ) {
-		array_push( $img_array, get_custom_image_4( $post_id ) );
+}
+
+function get_custom_descripcion_4 ( $post_id = '' ){
+	$value = get_field( 'descripcion_imagen4', $post_id );
+	if ( $value ){
+		return $value;
 	}
-	return( $img_array );
-}*/
+}
 
 function get_galleria( $post_id ) {
+	$i = 0;
 	$galleria = '
 	<!-- Slideshow container -->
 	<div class="lp-slideshow-container">
@@ -77,30 +89,46 @@ function get_galleria( $post_id ) {
 	if ( get_custom_image_1( $post_id ) ) {
 		$galleria = $galleria . '
 			<div class="lp-mySlides lp-fade">
-					<img src="' . get_custom_image_1( $post_id ) . '">
-					<div class="lp-text">Caption Text</div>
+				<img src="' . get_custom_image_1( $post_id ) . '">';
+		if ( get_custom_descripcion_1( $post_id ) ) {
+			$galleria = $galleria . '<div class="lp-text">' . get_custom_descripcion_1( $post_id ) . '</div>';
+		}
+		$galleria = $galleria . '
 			</div>';
+		$i++;
 	}
 	if ( get_custom_image_2( $post_id ) ) {
 		$galleria = $galleria . '
 			<div class="lp-mySlides lp-fade">
-					<img src="' . get_custom_image_2( $post_id ) . '">
-					<div class="lp-text">Caption Text</div>
+				<img src="' . get_custom_image_2( $post_id ) . '">';
+		if ( get_custom_descripcion_2( $post_id ) ) {
+			$galleria = $galleria . '<div class="lp-text">' . get_custom_descripcion_2( $post_id ) . '</div>';
+		}
+		$galleria = $galleria . '
 			</div>';
+		$i++;
 	}
 	if ( get_custom_image_3( $post_id ) ) {
 		$galleria = $galleria . '
 			<div class="lp-mySlides lp-fade">
-					<img src="' . get_custom_image_3( $post_id ) . '">
-					<div class="lp-text">Caption Text</div>
+				<img src="' . get_custom_image_3( $post_id ) . '">';
+			if ( get_custom_descripcion_3( $post_id ) ) {
+				$galleria = $galleria . '<div class="lp-text">' . get_custom_descripcion_3( $post_id ) . '</div>';
+			}
+		$galleria = $galleria . '
 			</div>';
+		$i++;
 	}
 	if ( get_custom_image_4( $post_id ) ) {
 		$galleria = $galleria . '
 			<div class="lp-mySlides lp-fade">
-					<img src="' . get_custom_image_4( $post_id ) . '">
-					<div class="lp-text">Caption Text</div>
+					<img src="' . get_custom_image_4( $post_id ) . '">';
+					if ( get_custom_descripcion_4( $post_id ) ) {
+						$galleria = $galleria . '<div class="lp-text">' . get_custom_descripcion_4( $post_id ) . '</div>';
+					}
+		$galleria = $galleria . '
 			</div>';
+		$i++;
 	}
 	$galleria = $galleria . '
 			  <!-- Next and previous buttons -->
@@ -110,11 +138,13 @@ function get_galleria( $post_id ) {
 			<br>
 			
 			<!-- The dots/circles -->
-			<div class="lp-dots">
-			  <span class="lp-dot" onclick="currentSlide(1)"></span>
-			  <span class="lp-dot" onclick="currentSlide(2)"></span>
-				<span class="lp-dot" onclick="currentSlide(3)"></span>
-			</div> 
-	';
+			<div class="lp-dots">';
+	$j = 1;
+	while ( $i > 0 ) {
+		$galleria = $galleria . '<span class="lp-dot" onclick="currentSlide(' . $j . ')"></span>';
+		$i--;
+		$j++;
+	}
+	$galleria = $galleria . '</div>';
 	echo $galleria;
 }

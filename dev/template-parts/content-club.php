@@ -34,11 +34,6 @@
 
 	<?php wprig_post_thumbnail(); ?>
 
-	<div class="post-thumbnail"> 
-		<?php
-			//get_custom_image_1( $post->ID );
-		?>
-	</div> 
 	<div class="galleria-content">
 		<?php
 			get_galleria( $post->ID );
