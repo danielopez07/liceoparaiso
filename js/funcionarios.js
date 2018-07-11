@@ -1,0 +1,1 @@
+"use strict";function openCity(e,t){var s,l,a;for(l=document.getElementsByClassName("city"),s=0;s<l.length;s++)l[s].style.display="none";for(a=document.getElementsByClassName("tablink"),s=0;s<l.length;s++)a[s].className=a[s].className.replace(" w3-red","");document.getElementById(t).style.display="block",e.currentTarget.className+=" w3-red"}
