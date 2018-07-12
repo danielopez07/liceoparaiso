@@ -15,27 +15,37 @@ get_header();
 * At some point, override functionality should be built in similar to the template part below.
 */
 // wp_print_styles( array( 'wprig-content', 'wprig-front-page', 'wprig-galleria' ) ); // Note: If this was already done it will be skipped.
-wp_print_styles( array( 'wprig-content', 'wprig-galleria' ) ); // Note: If this was already done it will be skipped.
+wp_print_styles( array( 'wprig-content', 'wprig-galleria', 'wprig-eventos' ) ); // Note: If this was already done it will be skipped.
 ?>
+
+	<main id="primary" class="site-main">
 
 		<div class="galleria-content">
 		<?php
 			get_galleria( 77 );
 		?>
-		</div>
+		</div> <!-- galleria -->
 
-	<main id="primary" class="site-main">
+		<article class="eventos">
+			<h2>Eventos</h2>
 
-		<?php
-		// while ( have_posts() ) :
-		// 	the_post();
+			<?php
+			$args = array(
+				'post_type' => 'evento',
+			);
 
-		// 	get_template_part( 'template-parts/content', get_post_type() );
+			$evento = new WP_Query( $args );
 
-		// endwhile; // End of the loop.
-		?>
+			while ( $evento->have_posts() ) :
+				$evento->the_post();
 
-		<?php the_posts_navigation(); ?>
+				get_template_part( 'template-parts/content', evento );
+
+			endwhile; // End of the loop.
+			?>
+		</article>
+
+		<!-- <?php the_posts_navigation(); ?> -->
 
 
 	</main><!-- #primary -->

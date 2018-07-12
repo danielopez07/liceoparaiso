@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package liceoparaiso
+ * @package wprig
  */
 
 ?>
@@ -16,7 +16,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php liceoparaiso_post_thumbnail(); ?>
+	<?php wprig_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
@@ -24,7 +24,7 @@
 			sprintf(
 				wp_kses(
 					/* translators: %s: Name of current post. Only visible to screen readers */
-					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'liceoparaiso' ),
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'wprig' ),
 					array(
 						'span' => array(
 							'class' => array(),
@@ -45,7 +45,7 @@
 
 		wp_link_pages(
 			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'liceoparaiso' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wprig' ),
 				'after'  => '</div>',
 			)
 		);
@@ -54,9 +54,9 @@
 
 	<footer class="entry-footer">
 		<?php
-		liceoparaiso_post_categories();
-		liceoparaiso_post_tags();
-		liceoparaiso_edit_post_link();
+		wprig_post_categories();
+		wprig_post_tags();
+		wprig_edit_post_link();
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->

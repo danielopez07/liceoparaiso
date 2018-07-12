@@ -1,6 +1,6 @@
 <?php
 /**
- * Template part for displaying page content in page.php
+ * Template part for displaying events
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
@@ -11,14 +11,37 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+		<?php
+			the_title( '<h3 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h3>' );
+		?>
 	</header><!-- .entry-header -->
 
 	<?php liceoparaiso_post_thumbnail(); ?>
 
 	<div class="entry-content">
 		<?php
-		the_content();
+		the_content(
+			sprintf(
+				wp_kses(
+					/* translators: %s: Name of current post. Only visible to screen readers */
+					__( 'Continue reading<span class="screen-reader-text"> "%s"</span>', 'liceoparaiso' ),
+					array(
+						'span' => array(
+							'class' => array(),
+						),
+					)
+				),
+				get_the_title()
+			)
+		);
+
+		?><p><?php echo get_field( 'fecha', $evento->$post_id ); ?></p><?php
+
+		// $fecha_inicio = get_post_meta($postIDID, 'fecha_de_inicio', true) ;
+		// $fecha_inicio_dia = substr($fecha_inicio,0,2);
+		// $fecha_inicio_mes = substr($fecha_inicio,2,2);
+		// $fecha_inicio_anno = substr($fecha_inicio,4,4);
+		// $nueva_fecha = $fecha_inicio_dia."/".$fecha_inicio_mes."/".$fecha_inicio_anno;
 
 		wp_link_pages(
 			array(
@@ -29,19 +52,12 @@
 		?>
 	</div><!-- .entry-content -->
 
-	<?php if ( get_edit_post_link() ) : ?>
-		<footer class="entry-footer">
-			<?php
-				liceoparaiso_edit_post_link();
-			?>
-		</footer><!-- .entry-footer -->
-	<?php endif; ?>
+	<footer class="entry-footer">
+		<?php
+		liceoparaiso_post_categories();
+		liceoparaiso_post_tags();
+		liceoparaiso_edit_post_link();
+		?>
+	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
-<?php
-if ( is_singular() ) :
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-endif;
