@@ -1,4 +1,4 @@
-<?php
+		<?php
 /**
  * Liceo de Pariso functions and definitions
  *
@@ -282,6 +282,8 @@ function liceoparaiso_styles() {
 	wp_register_style( 'liceoparaiso-front-page', get_theme_file_uri( '/css/front-page.css' ), array(), '20180514' );
 	wp_register_style( 'liceoparaiso-galleria', get_theme_file_uri( '/css/galleria.css' ), array(), '20180701' );
 	wp_register_style( 'liceoparaiso-eventos', get_theme_file_uri( '/css/eventos.css' ), array(), '20180708' );
+	wp_register_style( 'liceoparaiso-modalidad', get_theme_file_uri( '/css/modalidad.css' ), array(), '20180708' );
+
 }
 add_action( 'wp_enqueue_scripts', 'liceoparaiso_styles' );
 
@@ -313,6 +315,10 @@ function liceoparaiso_scripts() {
 		// Enqueue the galleria script.
 		wp_enqueue_script( 'liceoparaiso-galleria', get_theme_file_uri( '/js/galleria.js' ), array(), '20180701', false );
 		wp_script_add_data( 'liceoparaiso-galleria', 'async', true );
+
+		// Enqueue the funcionarios script.
+		wp_enqueue_script( 'liceoparaiso-funcionarios', get_theme_file_uri( '/js/funcionarios.js' ), array(), '20180709', false );
+		wp_script_add_data( 'liceoparaiso-funcionarios', 'async', true );
 	}
 
 }
@@ -365,3 +371,8 @@ if ( ! is_admin() ) {
 	}
 	add_action( 'wp_enqueue_scripts', 'load_dashicons_font' );
 }
+
+/**
+ * Implementa las funciones custom del template de modalidad.
+ */
+require get_template_directory() . '/pluggable/functions/funciones-modalidad.php';
