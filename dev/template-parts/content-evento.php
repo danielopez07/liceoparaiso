@@ -8,7 +8,6 @@
  */
 
 ?>
-
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -16,7 +15,7 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<?php wprig_post_thumbnail(); ?>
+	<?php wprig_post_thumbnail('medium'); ?>
 
 	<div class="entry-content">
 		<?php
@@ -35,7 +34,9 @@
 			)
 		);
 
-		?><p><?php echo get_field( 'fecha', $evento->$post_id ); ?></p><?php
+		?>
+		<p><?php echo get_field( 'fecha' ); ?></p>
+		<?php
 
 		// $fecha_inicio = get_post_meta($postIDID, 'fecha_de_inicio', true) ;
 		// $fecha_inicio_dia = substr($fecha_inicio,0,2);
@@ -60,4 +61,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
-

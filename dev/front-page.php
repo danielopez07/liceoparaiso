@@ -19,34 +19,21 @@ wp_print_styles( array( 'wprig-content', 'wprig-galleria', 'wprig-eventos' ) ); 
 ?>
 
 	<main id="primary" class="site-main">
-
-		<div class="galleria-content">
 		<?php
-			get_galleria( 77 );
+		while ( have_posts() ) :
+			the_post();
+
+			/*
+			* Include the component stylesheet for the content.
+			* This call runs only once on index and archive pages.
+			* At some point, override functionality should be built in similar to the template part below.
+			*/
+			wp_print_styles( array( 'wprig-content' ) ); // Note: If this was already done it will be skipped.
+
+			get_template_part( 'template-parts/content', 'front-page' );
+
+		endwhile; // End of the loop.
 		?>
-		</div> <!-- galleria -->
-
-		<article class="eventos">
-			<h2>Eventos</h2>
-
-			<?php
-			$args = array(
-				'post_type' => 'evento',
-			);
-
-			$evento = new WP_Query( $args );
-
-			while ( $evento->have_posts() ) :
-				$evento->the_post();
-
-				get_template_part( 'template-parts/content', evento );
-
-			endwhile; // End of the loop.
-			?>
-		</article>
-
-		<!-- <?php the_posts_navigation(); ?> -->
-
 
 	</main><!-- #primary -->
 
