@@ -12,18 +12,27 @@
 ?>
 
 <footer id="colophon" class="site-footer">
+	<hr>
+	<nav class="footer-menu">
+	<?php
+	wp_nav_menu(
+		array(
+			'theme_location' => 'footer',
+			'menu_id'        => 'footer-menu',
+			'container'      => 'ul',
+		)
+	);
+	?>
+	</nav>
+	<hr>
 	<div class="site-info">
-		<a href="<?php echo esc_url( __( 'https://wordpress.org/', 'wprig' ) ); ?>">
-			<?php
-			/* translators: %s: CMS name, i.e. WordPress. */
-			printf( esc_html__( 'Proudly powered by %s', 'wprig' ), 'WordPress' );
-			?>
-		</a>
-		<span class="sep"> | </span>
+		<p> Liceo de Paraíso <span class="sep"> | </span>
+		<a href="sandstormagency.com" target="blank">Sandstorm Agency</a> © 
 		<?php
-			/* translators: 1: Theme name, 2: Theme author. */
-			printf( esc_html__( 'Theme: %1$s by %2$s.', 'wprig' ), '<a href="' . esc_url( 'https://github.com/wprig/wprig/' ) . '">WP Rig</a>', 'the contributors' );
+		echo esc_html( date( 'Y' ) );
 		?>
+		Todos los derechos reservados.</p>
+
 	</div><!-- .site-info -->
 </footer><!-- #colophon -->
 </div><!-- #page -->
