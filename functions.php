@@ -376,3 +376,8 @@ if ( ! is_admin() ) {
  * Implementa las funciones custom del template de modalidad.
  */
 require get_template_directory() . '/pluggable/functions/funciones-modalidad.php';
+
+/**
+ * Implementa las funciones custom del template de transporte.
+ */
+require get_template_directory() . '/pluggable/functions/funciones-transporte.php';

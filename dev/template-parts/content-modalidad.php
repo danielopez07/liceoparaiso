@@ -8,8 +8,8 @@
  */
 
 ?>
-		
-<?php 
+
+<?php
 	wp_print_styles( array( 'wprig-modalidad' ) ); // Note: If this was already done it will be skipped.
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -22,7 +22,7 @@
 		endif;
 
 		if ( 'post' === get_post_type() ) :
-			?>
+		?>
 			<div class="entry-meta">
 				<?php
 					wprig_posted_on();
@@ -30,36 +30,35 @@
 					wprig_comments_link();
 				?>
 			</div><!-- .entry-meta -->
-			<?php
+		<?php
 		endif;
 		?>
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-
-		<h2>Total funcionarios</h2>
-
-		<h4 id="titulomodalidad2">
-		<?php 
-		$titulo = get_the_title();
-		echo $titulo; 
-		?> 
-		</h4>
-
-		<h2>Total funcionarios end</h2>
 		<?php
-		$titulo2 = get_the_title();
-		get_funcionarios($titulo2); 
+		$titulo = get_the_title();
+		if ( 'Diurno' === $titulo ) {
+			get_funcionarios_diurno( $titulo );
+		} elseif ( 'Nocturno' === $titulo ) {
+			get_funcionarios_nocturno( $titulo );
+		} else {
+			get_funcionarios_vocacional( $titulo );
+		}
+		$modalidad = new WP_Query( array( 'post_type' => 'modalidad' ) );
+		$modalidad->the_post();
 		?>
 
 		<h3> Reseña histórica </h3>
 		<div class="resena"><p>
-				<?php
-				$value = get_field( 'resena', $post->ID );
-				if ( $value ) {
-					echo $value;
-				}
-				?>
+			<?php
+			$value = get_field( 'resena', $post->ID );
+			if ( $value ) :
+				echo $value;
+			else :
+				echo 'No llega el valor';
+			endif;
+			?>
 		</p></div>
 
 		<?php wprig_post_thumbnail(); ?>
@@ -73,14 +72,7 @@
 				}
 				?>
 		</p></div>
-		<?php
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wprig' ),
-				'after'  => '</div>',
-			)
-		);
-		?>
+
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
@@ -91,18 +83,3 @@
 		?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
-<?php
-if ( is_singular() ) :
-	the_post_navigation(
-		array(
-			'prev_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Previous:', 'wprig' ) . '</span></div>%title',
-			'next_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Next:', 'wprig' ) . '</span></div>%title',
-		)
-	);
-
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-endif;

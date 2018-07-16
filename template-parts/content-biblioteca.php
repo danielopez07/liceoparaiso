@@ -9,9 +9,6 @@
 
 ?>
 
-<?php
-	wp_print_styles( array( 'liceoparaiso-modalidad' ) ); // Note: If this was already done it will be skipped.
-?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php
@@ -37,16 +34,10 @@
 
 	<div class="entry-content">
 		<?php
-		$titulo = get_the_title();
-		if ( 'Diurno' === $titulo ) {
-			get_funcionarios_diurno( $titulo );
-		} elseif ( 'Nocturno' === $titulo ) {
-			get_funcionarios_nocturno( $titulo );
-		} else {
-			get_funcionarios_vocacional( $titulo );
-		}
-		$modalidad = new WP_Query( array( 'post_type' => 'modalidad' ) );
-		$modalidad->the_post();
+			$titulo2 = get_the_title();
+			get_funcionarios( $titulo2 );
+			$modalidad = new WP_Query( array( 'post_type' => 'modalidad' ) );
+			$modalidad->the_post();
 		?>
 
 		<h3> Reseña histórica </h3>
