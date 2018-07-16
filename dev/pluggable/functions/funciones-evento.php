@@ -57,18 +57,36 @@ function get_eventos() {
 		?>
 		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
 			<header class="entry-header">
+			<?php
+				$evento = get_post( $post_ID );
+			?>
 			<h3>
 				<?php
-					echo get_the_title( $post_ID );
+				echo wp_kses_post( $evento->post_title );
 				?>
 			</h3>
-			</header><!-- .entry-header -->
-
 			<?php
-			print_formated_date( $fecha );
+				print_formated_date( $evento->fecha );
+				echo wp_kses_post( $evento->post_content );
+				echo wp_kses_post( $evento->post_thumbnail );
+				the_post_thumbnail( $evento );
 			?>
 
 			<img src="<?php echo esc_html( $arr_imags[ $post_ID ] ); ?>" class="image-evento" alt="<?php echo esc_html( $arr_capts[ $post_ID ] ); ?>">
+
+			<hr>
+
+			<?php
+			// $evento = new WP_Query( array( 'p' => (int) $post_ID ) );
+			// while ( $evento->have_posts() ) :
+			// 	$evento->the_post();
+			// 	echo get_the_title();
+			// endwhile;
+			// wp_reset_postdata();
+			
+			// intento con wp_query, para no tener que usar array para imagenes,
+			// pero no funciono
+			?>
 
 		</article><!-- #post -->
 		<?php

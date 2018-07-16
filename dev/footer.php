@@ -12,7 +12,6 @@
 ?>
 
 <footer id="colophon" class="site-footer">
-	<hr>
 	<nav class="footer-menu">
 	<?php
 	wp_nav_menu(
@@ -27,7 +26,7 @@
 	<hr>
 	<div class="site-info">
 		<p> Liceo de Paraíso <span class="sep"> | </span>
-		<a href="sandstormagency.com" target="blank">Sandstorm Agency</a> © 
+		<a href="https://sandstormagency.com" target="blank">Sandstorm Agency</a> © 
 		<?php
 		echo esc_html( date( 'Y' ) );
 		?>
