@@ -45,6 +45,7 @@ function wprig_setup() {
 	register_nav_menus(
 		array(
 			'primary' => esc_html__( 'Primary', 'wprig' ),
+			'footer' => esc_html__( 'Footer', 'wprig' ),
 		)
 	);
 
@@ -381,3 +382,6 @@ require get_template_directory() . '/pluggable/functions/funciones-modalidad.php
  * Implementa las funciones custom del template de transporte.
  */
 require get_template_directory() . '/pluggable/functions/funciones-transporte.php';
+ * Implementa las funciones custom para los eventos en front-page.
+ */
+require get_template_directory() . '/pluggable/functions/funciones-evento.php';

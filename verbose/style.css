@@ -573,7 +573,7 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	margin-bottom: 1.5em;
+	/* margin-bottom: 1.5em; */
 }
 
 ul, ol {
@@ -622,8 +622,7 @@ table {
 # Links
 --------------------------------------------------------------*/
 a {
-	/* color: #0073aa; */
-	text-decoration: none;
+	text-decoration: none!important;
 	color: #3b58b8;
 }
 
@@ -632,8 +631,8 @@ a {
 } */
 
 a:hover, a:focus, a:active {
-	/* color: #00a0d2; */
-	text-decoration: underline;
+	color: #00a0d2;
+	text-decoration: none;
 }
 
 a:focus {
@@ -775,6 +774,11 @@ textarea {
 	color: inherit;
 }
 
+.main-navigation ul li a:hover {
+	color: white;
+	background-color: #3b5998;
+}
+
 .site-description {
 	margin: .4375em 0 0;
 	font-family: 'Roboto Condensed', sans-serif;
@@ -793,6 +797,8 @@ textarea {
 	-webkit-box-direction: normal;
 	    -ms-flex-direction: column;
 	        flex-direction: column;
+	max-width: 150px;
+	margin: auto;
 }
 
 #facebook-icon {
@@ -807,6 +813,10 @@ textarea {
 	left: 0;
 	font-size: 3em;
 	color: #3b5998;
+} @media screen and (max-width: 37.5em) {
+	#facebook-fixed {
+		display: none;
+	}
 }
 
 .social-navigation {
@@ -835,6 +845,11 @@ textarea {
 }
 
 @media screen and (min-width: 37.5em) {
+	#header-social {
+		max-width: 100%;
+		margin: 0;
+	}
+
 	.custom-logo-link {
 		margin: 0;
 	}
@@ -849,6 +864,7 @@ textarea {
 		    -ms-flex-align: center;
 		        align-items: center;
 	}
+
 }
 
 /*--------------------------------------------------------------
@@ -881,12 +897,6 @@ textarea {
 	width: 100%;
 	padding: .5em 1em .5em 0;
 	text-decoration: none;
-	/* color: black; */
-}
-
-.main-navigation a:hover,
-.main-navigation a:focus {
-	text-decoration: underline;
 }
 
 .main-navigation ul {
@@ -1096,13 +1106,48 @@ textarea {
 # Footer
 --------------------------------------------------------------*/
 .site-footer {
-	margin: 1em 0 0;
-	padding: 2em 0;
+	margin: 0;
+	padding: 2em 0 0.5em;
+	width: 100%;
 	font-family: 'Roboto Condensed', sans-serif;
+	background-color: #3b58b8;
+	color: #fff;
+}
+
+.footer-menu ul {
+	display: grid;
+	grid-template-columns: auto auto;
+	list-style: none;
+	margin: 0;
+	padding: 0 0 1em;
+}
+
+.footer-menu a {
+	padding: 0.5em 1em 0.5em;
+	color: #fff;
+}
+
+.site-info a {
+	color: #fff;
+}
+
+.footer-menu li {
+	text-align: center;
 }
 
 .site-info {
 	text-align: center;
+}
+
+@media screen and (min-width: 37.5em) {
+	.footer-menu ul {
+		display: grid;
+		grid-template-columns: auto auto auto;
+	}
+	/* .site-footer {
+		margin: 0;
+		padding: 1em 0;
+	} */
 }
 
 /*--------------------------------------------------------------
