@@ -1,0 +1,23 @@
+/**
+ * Custom styles for the reglamentos en nosotros y modalidad.
+ */
+
+.reglamentos,
+.protocolos {
+	text-align: center;
+	background-color: antiquewhite;
+	padding: 0 1em 1em;
+	border-radius: 5px;
+}
+
+@media (--wide-menu-query) {
+	.reglamentos-container {
+		width: 100%;
+		display: flex;
+		justify-content: space-around;
+	}
+	.reglamentos,
+	.protocolos {
+		width: 40%;
+	}
+}

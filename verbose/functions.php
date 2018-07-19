@@ -284,6 +284,8 @@ function liceoparaiso_styles() {
 	wp_register_style( 'liceoparaiso-galleria', get_theme_file_uri( '/css/galleria.css' ), array(), '20180701' );
 	wp_register_style( 'liceoparaiso-eventos', get_theme_file_uri( '/css/eventos.css' ), array(), '20180708' );
 	wp_register_style( 'liceoparaiso-modalidad', get_theme_file_uri( '/css/modalidad.css' ), array(), '20180708' );
+	wp_register_style( 'liceoparaiso-reglamentos', get_theme_file_uri( '/css/reglamentos.css' ), array(), '20180716' );
+	wp_register_style( 'liceoparaiso-nosotros', get_theme_file_uri( '/css/nosotros.css' ), array(), '20180717' );
 
 }
 add_action( 'wp_enqueue_scripts', 'liceoparaiso_styles' );
@@ -387,3 +389,8 @@ require get_template_directory() . '/pluggable/functions/funciones-transporte.ph
 * Implementa las funciones custom para los eventos en front-page.
  */
 require get_template_directory() . '/pluggable/functions/funciones-evento.php';
+
+/**
+* Implementa las funciones custom para los reglamentos en nosotros y modalidades.
+ */
+require get_template_directory() . '/pluggable/functions/funciones-reglamentos.php';

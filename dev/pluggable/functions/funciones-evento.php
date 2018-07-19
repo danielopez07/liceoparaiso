@@ -2,7 +2,7 @@
 /**
  * Template part for displaying eventos in the front page
  *
- * @package liceoparaiso
+ * @package wprig
  */
 
 /**

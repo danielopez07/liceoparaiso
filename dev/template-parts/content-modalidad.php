@@ -10,7 +10,7 @@
 ?>
 
 <?php
-	wp_print_styles( array( 'wprig-modalidad' ) ); // Note: If this was already done it will be skipped.
+	wp_print_styles( array( 'wprig-modalidad', 'wprig-reglamentos' ) ); // Note: If this was already done it will be skipped.
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
@@ -72,6 +72,10 @@
 				}
 				?>
 		</p></div>
+
+		<?php
+		get_reglamentos( $post->ID );
+		?>
 
 	</div><!-- .entry-content -->
 

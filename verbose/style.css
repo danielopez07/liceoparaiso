@@ -84,10 +84,9 @@ h1 {
  */
 
 hr {
-	-webkit-box-sizing: content-box;
-	        box-sizing: content-box; /* 1 */
+	/*box-sizing: content-box;*/ /* 1 */
 	height: 0; /* 1 */
-	overflow: visible; /* 2 */
+	/*overflow: visible;*/ /* 2 */
 }
 
 /**
@@ -574,6 +573,7 @@ hr {
 	border: 0;
 	height: 1px;
 	/* margin-bottom: 1.5em; */
+	margin: 2px 0px;
 }
 
 ul, ol {
@@ -875,8 +875,9 @@ textarea {
 	display: block;
 	margin: 0 auto 2em;
 	padding: 0 1em;
-	max-width: calc(45 * 16)px; /* Fallback for older browsers. */
-	max-width: 45rem;
+	/* max-width: calc(var(--content-width) * 16)px;*/ /* Fallback for older browsers. */
+	/* max-width: var(--content-width)rem; */
+	max-width: 90%;
 	font-family: 'Roboto Condensed', sans-serif;
 }
 
