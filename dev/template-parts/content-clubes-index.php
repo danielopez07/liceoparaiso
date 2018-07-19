@@ -48,8 +48,12 @@
 				<li>
 					<?php
 					$query->the_post();
-					the_title();
 					?>
+					<a href="<?php echo esc_html( get_permalink() ); ?>">
+						<?php
+						the_title();
+						?>
+					</a>
 				</li>
 				<?php
 			endwhile;

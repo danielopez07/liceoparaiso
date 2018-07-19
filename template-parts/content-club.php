@@ -7,6 +7,7 @@
  * @package liceoparaiso
  */
 
+wp_print_styles( array( 'liceoparaiso-club' ) ); // Note: If this was already done it will be skipped.
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -17,18 +18,6 @@
 		else :
 			the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 		endif;
-
-		if ( 'post' === get_post_type() ) :
-			?>
-			<div class="entry-meta">
-				<?php
-					liceoparaiso_posted_on();
-					liceoparaiso_posted_by();
-					liceoparaiso_comments_link();
-				?>
-			</div><!-- .entry-meta -->
-			<?php
-		endif;
 		?>
 	</header><!-- .entry-header -->
 
@@ -36,7 +25,7 @@
 
 	<div class="galleria-content">
 		<?php
-			get_galleria( $post->ID );
+		get_galleria( $post->ID );
 		?>
 	</div>
 	<div class="entry-content">
@@ -55,36 +44,10 @@
 				get_the_title()
 			)
 		);
-
-		wp_link_pages(
-			array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'liceoparaiso' ),
-				'after'  => '</div>',
-			)
-		);
 		?>
+		<div class="indice">
+			<a href="/clubes/">Índice de los clubes</a>
+		</div>
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php
-		liceoparaiso_post_categories();
-		liceoparaiso_post_tags();
-		liceoparaiso_edit_post_link();
-		?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
-
-<?php
-if ( is_singular() ) :
-	the_post_navigation(
-		array(
-			'prev_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Previous:', 'liceoparaiso' ) . '</span></div>%title',
-			'next_text' => '<div class="post-navigation-sub"><span>' . esc_html__( 'Next:', 'liceoparaiso' ) . '</span></div>%title',
-		)
-	);
-
-	// If comments are open or we have at least one comment, load up the comment template.
-	if ( comments_open() || get_comments_number() ) :
-		comments_template();
-	endif;
-endif;
