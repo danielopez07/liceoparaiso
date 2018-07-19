@@ -9,7 +9,7 @@
 
 ?>
 
-<?php
+<?php 
 	wp_print_styles( array( 'liceoparaiso-modalidad', 'liceoparaiso-reglamentos' ) ); // Note: If this was already done it will be skipped.
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
