@@ -183,25 +183,33 @@ function liceoparaiso_fonts_url() {
 	$fonts_url = '';
 
 	/**
-	 * Translator: If Roboto Sans does not support characters in your language, translate this to 'off'.
+	 * Translator: If Roboto does not support characters in your language, translate this to 'off'.
 	 */
-	$roboto = esc_html_x( 'on', 'Roboto Condensed font: on or off', 'liceoparaiso' );
+	$roboto = esc_html_x( 'on', 'Roboto font: on or off', 'liceoparaiso' );
 	/**
-	 * Translator: If Crimson Text does not support characters in your language, translate this to 'off'.
+	 * Translator: If Roboto Mono does not support characters in your language, translate this to 'off'.
 	 */
-	$crimson_text = esc_html_x( 'on', 'Crimson Text font: on or off', 'liceoparaiso' );
+	$roboto_mono = esc_html_x( 'on', 'Roboto Mono font: on or off', 'liceoparaiso' );
+	/**
+	 * Translator: If Frank Ruhl Libre does not support characters in your language, translate this to 'off'.
+	 */
+	$frank_ruhl_libre = esc_html_x( 'on', 'Frank Ruhl Libre font: on or off', 'liceoparaiso' );
 
 	$font_families = array();
 
 	if ( 'off' !== $roboto ) {
-		$font_families[] = 'Roboto Condensed:400,400i,700,700i';
+		$font_families[] = 'Roboto:300,300i,400,400i';
 	}
 
-	if ( 'off' !== $crimson_text ) {
-		$font_families[] = 'Crimson Text:400,400i,600,600i';
+	if ( 'off' !== $roboto_mono ) {
+		$font_families[] = 'Roboto Mono:300,300i,400,400i';
 	}
 
-	if ( in_array( 'on', array( $roboto, $crimson_text ) ) ) {
+	if ( 'off' !== $frank_ruhl_libre ) {
+		$font_families[] = 'Frank Ruhl Libre:400,400i,500,500i';
+	}
+
+	if ( in_array( 'on', array( $roboto, $roboto_mono, $frank_ruhl_libre ) ) ) {
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
 			'subset' => urlencode( 'latin,latin-ext' ),

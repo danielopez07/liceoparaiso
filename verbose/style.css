@@ -481,14 +481,14 @@ select,
 optgroup,
 textarea {
 	color: #333;
-	font-family: 'Crimson Text', serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	font-size: calc(20 / 16)rem;
 	line-height: 1.4;
 }
 
 h1, h2, h3, h4, h5, h6 {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 	color: #32373c;
 	clear: both;
 }
@@ -623,7 +623,7 @@ table {
 --------------------------------------------------------------*/
 a {
 	text-decoration: none!important;
-	color: #3b58b8;
+	color: #4472c4;
 }
 
 /* a:visited {
@@ -631,7 +631,7 @@ a {
 } */
 
 a:hover, a:focus, a:active {
-	color: #00a0d2;
+	color: #fbdc29;
 	text-decoration: none;
 }
 
@@ -734,7 +734,7 @@ textarea {
 
 .site-header {
 	padding-bottom: 1em;
-	color: #3b58b8!important;
+	color: #4472c4!important;
 }
 
 .header-image {
@@ -757,31 +757,61 @@ textarea {
 
 .site-branding {
 	text-align: center;
-	padding: 1.75em 0 1.75em;
+	padding: 1em 0 1em;
+	background-color: #4472c4;
+	color: #fff;
+}
+.site-branding a {
+	color: #fff;
+}
+.site-branding a:hover,
+.site-branding a:focus,
+.site-branding a:active {
+	color: #fbdc29;
 }
 
 .site-title {
 	margin: 0 1em;
-	font-family: 'Roboto Condensed', sans-serif;
 	font-size: 38px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	line-height: 1.2;
-	/* color: #333332; */
+	font-family: 'Frank Ruhl Libre', mono;
 }
 
 .site-title a {
-	text-decoration: none;
 	color: inherit;
 }
 
 .main-navigation ul li a:hover {
 	color: white;
-	background-color: #3b5998;
+	background-color: #4472c4;
 }
+
+/* intentando marcar la pagina donde se encuentra la persona 
+https://www.webhostinghero.com/how-to-highlight-the-current-page-or-menu-item-in-wordpress/
+https://www.isitwp.com/highlight-current-page-in-menu/
+http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post-type-pages-with-wp_list_pages-in-wordpress/*/
+
+/* .main-navigation li.current_menu_item{
+	background:#999;
+	color:#fff;
+} */
+/* .current_menu_item {
+	background:#999;
+	color:#fff;
+} 
+.current_page_item {
+	background:#999;
+	color:#fff;
+} */
+/* Highlight using link element */
+/* .main-navigation li.current_menu_item a{
+	background:#666;
+} */
 
 .site-description {
 	margin: .4375em 0 0;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 	font-size: 17px;
 	font-weight: inherit;
 	line-height: 1.4;
@@ -804,7 +834,7 @@ textarea {
 #facebook-icon {
 	font-size: 22px;
 	vertical-align: sub;
-	color: #3b5998;
+	/* color: #3b5998; */
 }
 
 #facebook-fixed {
@@ -827,21 +857,11 @@ textarea {
 	text-decoration: none;
 }
 
-.social-navigation a:hover,
-.social-navigation a:focus {
-	text-decoration: underline;
-}
-
 .header-button {
 	margin: 2px;
 	background-color: orangered;
 	border-radius: 5px;
 	color: white;
-}
-
-.header-button a:hover,
-.header-button a:focus {
-	text-decoration: none;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -878,14 +898,14 @@ textarea {
 	/* max-width: calc(var(--content-width) * 16)px;*/ /* Fallback for older browsers. */
 	/* max-width: var(--content-width)rem; */
 	max-width: 90%;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 }
 
 .menu-toggle {
 	display: block;
 	margin: 1.2em auto;
 	padding: .6em 1.2em .5em;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 	font-size: 80%;
 	text-transform: uppercase;
 	border: 2px solid black;
@@ -1070,7 +1090,7 @@ textarea {
 	max-width: 720px;
 	overflow: hidden;
 	padding-bottom: 2em;
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 }
 
 .nav-links {
@@ -1110,8 +1130,8 @@ textarea {
 	margin: 0;
 	padding: 2em 0 0.5em;
 	width: 100%;
-	font-family: 'Roboto Condensed', sans-serif;
-	background-color: #3b58b8;
+	font-family: 'Frank Ruhl Libre', mono;
+	background-color: #4472c4;
 	color: #fff;
 }
 
@@ -1130,6 +1150,15 @@ textarea {
 
 .site-info a {
 	color: #fff;
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus,
+.footer-menu a:active,
+.site-info a:hover,
+.site-info a:focus,
+.site-info a:active {
+	color: #fbdc29;
 }
 
 .footer-menu li {

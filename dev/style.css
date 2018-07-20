@@ -615,7 +615,7 @@ table {
 --------------------------------------------------------------*/
 a {
 	text-decoration: none!important;
-	color: #3b58b8;
+	color: #4472c4;
 }
 
 /* a:visited {
@@ -623,7 +623,7 @@ a {
 } */
 
 a:hover, a:focus, a:active {
-	color: #00a0d2;
+	color: #fbdc29;
 	text-decoration: none;
 }
 
@@ -726,7 +726,7 @@ textarea {
 
 .site-header {
 	padding-bottom: 1em;
-	color: #3b58b8!important;
+	color: #4472c4!important;
 }
 
 .header-image {
@@ -749,27 +749,57 @@ textarea {
 
 .site-branding {
 	text-align: center;
-	padding: 1.75em 0 1.75em;
+	padding: 1em 0 1em;
+	background-color: #4472c4;
+	color: #fff;
+}
+.site-branding a {
+	color: #fff;
+}
+.site-branding a:hover,
+.site-branding a:focus,
+.site-branding a:active {
+	color: #fbdc29;
 }
 
 .site-title {
 	margin: 0 1em;
-	font-family: var(--highlight-font-family);
 	font-size: 38px;
-	font-weight: bold;
+	/* font-weight: bold; */
 	line-height: 1.2;
-	/* color: #333332; */
+	font-family: var(--title-font-family);
 }
 
 .site-title a {
-	text-decoration: none;
 	color: inherit;
 }
 
 .main-navigation ul li a:hover {
 	color: white;
-	background-color: #3b5998;
+	background-color: #4472c4;
 }
+
+/* intentando marcar la pagina donde se encuentra la persona 
+https://www.webhostinghero.com/how-to-highlight-the-current-page-or-menu-item-in-wordpress/
+https://www.isitwp.com/highlight-current-page-in-menu/
+http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post-type-pages-with-wp_list_pages-in-wordpress/*/
+
+/* .main-navigation li.current_menu_item{
+	background:#999;
+	color:#fff;
+} */
+/* .current_menu_item {
+	background:#999;
+	color:#fff;
+} 
+.current_page_item {
+	background:#999;
+	color:#fff;
+} */
+/* Highlight using link element */
+/* .main-navigation li.current_menu_item a{
+	background:#666;
+} */
 
 .site-description {
 	margin: .4375em 0 0;
@@ -791,7 +821,7 @@ textarea {
 #facebook-icon {
 	font-size: 22px;
 	vertical-align: sub;
-	color: #3b5998;
+	/* color: #3b5998; */
 }
 
 #facebook-fixed {
@@ -814,21 +844,11 @@ textarea {
 	text-decoration: none;
 }
 
-.social-navigation a:hover,
-.social-navigation a:focus {
-	text-decoration: underline;
-}
-
 .header-button {
 	margin: 2px;
 	background-color: orangered;
 	border-radius: 5px;
 	color: white;
-}
-
-.header-button a:hover,
-.header-button a:focus {
-	text-decoration: none;
 }
 
 @media (--wide-menu-query) {
@@ -1075,7 +1095,7 @@ textarea {
 	padding: 2em 0 0.5em;
 	width: 100%;
 	font-family: var(--highlight-font-family);
-	background-color: #3b58b8;
+	background-color: #4472c4;
 	color: #fff;
 }
 
@@ -1094,6 +1114,15 @@ textarea {
 
 .site-info a {
 	color: #fff;
+}
+
+.footer-menu a:hover,
+.footer-menu a:focus,
+.footer-menu a:active,
+.site-info a:hover,
+.site-info a:focus,
+.site-info a:active {
+	color: #fbdc29;
 }
 
 .footer-menu li {

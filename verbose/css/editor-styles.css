@@ -4,7 +4,7 @@
  */
 .editor-writing-flow {
 	color: #333;
-	font-family: 'Crimson Text', serif;
+	font-family: 'Roboto', sans-serif;
 	font-size: 20px;
 	font-size: calc(20 / 16)rem;
 	line-height: 1.4;
@@ -18,7 +18,7 @@
 .editor-writing-flow h5,
 .editor-writing-flow h6,
 .edit-post-visual-editor p {
-	font-family: 'Roboto Condensed', sans-serif;
+	font-family: 'Frank Ruhl Libre', mono;
 	color: #32373c;
 	clear: both;
 }
@@ -30,7 +30,7 @@
 }
 
 .edit-post-visual-editor p {
-	font-family: 'Crimson Text', serif;
+	font-family: 'Roboto', sans-serif;
 }
 
 /* Visualize editor color palette (defined in functions.php). */
