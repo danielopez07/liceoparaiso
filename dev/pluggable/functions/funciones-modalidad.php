@@ -153,6 +153,7 @@ function get_funcionarios_diurno_administrativo() {
 		$title    = get_the_title();
 		$admin = $admin . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $admin;
 }
 
@@ -173,6 +174,7 @@ function get_funcionarios_diurno_ingles() {
 		$title    = get_the_title();
 		$ingles = $ingles . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $ingles;
 }
 
@@ -193,6 +195,7 @@ function get_funcionarios_diurno_ciencias() {
 		$title    = get_the_title();
 		$ciencias = $ciencias . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $ciencias;
 }
 
@@ -213,6 +216,7 @@ function get_funcionarios_diurno_matematica() {
 		$title    = get_the_title();
 		$mate = $mate . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $mate;
 }
 
@@ -233,6 +237,7 @@ function get_funcionarios_diurno_sociales() {
 		$title    = get_the_title();
 		$sociales = $sociales . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $sociales;
 }
 
@@ -253,6 +258,7 @@ function get_funcionarios_diurno_espa() {
 		$title    = get_the_title();
 		$espa = $espa . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $espa;
 }
 
@@ -273,6 +279,7 @@ function get_funcionarios_diurno_orientacion() {
 		$title    = get_the_title();
 		$orientacion = $orientacion . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $orientacion;
 }
 
@@ -293,6 +300,7 @@ function get_funcionarios_diurno_biblioteca() {
 		$title    = get_the_title();
 		$biblio = $biblio . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $biblio;
 }
 
@@ -313,6 +321,7 @@ function get_funcionarios_diurno_jardineria() {
 		$title    = get_the_title();
 		$jardineria = $jardineria . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $jardineria;
 }
 
@@ -334,6 +343,7 @@ function get_funcionarios_diurno_seguridad() {
 		$title    = get_the_title();
 		$seguridad = $seguridad . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $seguridad;
 }
 
@@ -355,6 +365,7 @@ function get_funcionarios_diurno_comedor() {
 		$title    = get_the_title();
 		$comerdor = $comedor . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $comedor;
 }
 
@@ -376,6 +387,7 @@ function get_funcionarios_diurno_miscelaneos() {
 		$title    = get_the_title();
 		$misc = $misc . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $misc;
 }
 
@@ -397,6 +409,7 @@ function get_funcionarios_diurno_psicologia() {
 		$title    = get_the_title();
 		$psi = $psi . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $psi;
 }
 
@@ -439,6 +452,7 @@ function get_funcionarios_diurno_musica() {
 		$title    = get_the_title();
 		$musica = $musica . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $musica;
 }
 
@@ -460,6 +474,7 @@ function get_funcionarios_diurno_frances() {
 		$title    = get_the_title();
 		$fra = $fra . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $fra;
 }
 
@@ -481,6 +496,7 @@ function get_funcionarios_diurno_informatica() {
 		$title    = get_the_title();
 		$info = $info . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $info;
 }
 
@@ -524,6 +540,7 @@ function get_funcionarios_diurno_edvida() {
 		$title    = get_the_title();
 		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $a;
 }
 
@@ -566,6 +583,7 @@ function get_funcionarios_diurno_religion() {
 		$title    = get_the_title();
 		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $a;
 }
 
@@ -606,5 +624,6 @@ function get_funcionarios_diurno_tecnologia() {
 		$title    = get_the_title();
 		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
+	wp_reset_postdata();
 	return $a;
 }
