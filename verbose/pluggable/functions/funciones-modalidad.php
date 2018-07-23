@@ -40,95 +40,95 @@ function get_funcionarios_diurno() {
 
 		</div>
 	
-		<div id="Administrativo" class="w3-container w3-border city">
+		<div id="Administrativo" class="w3-cont w3-border city">
 			' . get_funcionarios_diurno_administrativo() . '
 		</div>
 
-		<div id="Ingles" class="w3-container w3-border city" style="display:none">
+		<div id="Ingles" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_ingles() . '
 		</div>
 
-		<div id="Ciencias" class="w3-container w3-border city" style="display:none">
+		<div id="Ciencias" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_ciencias() . '
 		</div>
 
-		<div id="Matematicas" class="w3-container w3-border city" style="display:none">
+		<div id="Matematicas" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_matematica() . '
 		</div>
 
-		<div id="Sociales" class="w3-container w3-border city" style="display:none">
+		<div id="Sociales" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_sociales() . '
 		</div>
 
-		<div id="Espanol" class="w3-container w3-border city" style="display:none">
+		<div id="Espanol" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_espa() . '
 		</div>
 
-		<div id="Orientacion" class="w3-container w3-border city" style="display:none">
+		<div id="Orientacion" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_orientacion() . '
 		</div>
 
-		<div id="Biblioteca" class="w3-container w3-border city" style="display:none">
+		<div id="Biblioteca" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_biblioteca() . '
 		</div>
 
-		<div id="Jardineria" class="w3-container w3-border city" style="display:none">
+		<div id="Jardineria" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_jardineria() . '
 		</div>
 
-		<div id="Seguridad" class="w3-container w3-border city" style="display:none">
+		<div id="Seguridad" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_seguridad() . '
 		</div>
 
-		<div id="Comedor" class="w3-container w3-border city" style="display:none">
+		<div id="Comedor" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_comedor() . '
 		</div>
 
-		<div id="Miscelaneos" class="w3-container w3-border city" style="display:none">
+		<div id="Miscelaneos" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_miscelaneos() . '
 		</div>
 
-		<div id="Psicologia" class="w3-container w3-border city" style="display:none">
+		<div id="Psicologia" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_psicologia() . '
 		</div>
 
-		<div id="Plasticas" class="w3-container w3-border city" style="display:none">
+		<div id="Plasticas" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_plasticas() . '
 		</div>
 
-		<div id="Musica" class="w3-container w3-border city" style="display:none">
+		<div id="Musica" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_musica() . '
 		</div>
 
-		<div id="Frances" class="w3-container w3-border city" style="display:none">
+		<div id="Frances" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_frances() . '
 		</div>
 
-		<div id="Informatica" class="w3-container w3-border city" style="display:none">
+		<div id="Informatica" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_informatica() . '
 		</div>
 
-		<div id="Industriales" class="w3-container w3-border city" style="display:none">
+		<div id="Industriales" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_industriales() . '
 		</div>
 
-		<div id="EdVida" class="w3-container w3-border city" style="display:none">
+		<div id="EdVida" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_edvida() . '
 		</div>
 
-		<div id="EdFisica" class="w3-container w3-border city" style="display:none">
+		<div id="EdFisica" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_edfisica() . '
 		</div>
 
-		<div id="Religion" class="w3-container w3-border city" style="display:none">
+		<div id="Religion" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_sociales() . '
 		</div>
 
-		<div id="Filosofia" class="w3-container w3-border city" style="display:none">
+		<div id="Filosofia" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_filosofia() . '
 		</div>
 
-		<div id="Tecnologia" class="w3-container w3-border city" style="display:none">
+		<div id="Tecnologia" class="w3-cont w3-border city" style="display:none">
 			' . get_funcionarios_diurno_tecnologia() . '
 		</div>
 	</div>
@@ -151,7 +151,7 @@ function get_funcionarios_diurno_administrativo() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$admin = $admin . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$admin = $admin . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $admin;
 }
@@ -171,7 +171,7 @@ function get_funcionarios_diurno_ingles() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$ingles = $ingles . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$ingles = $ingles . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $ingles;
 }
@@ -191,7 +191,7 @@ function get_funcionarios_diurno_ciencias() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$ciencias = $ciencias . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$ciencias = $ciencias . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $ciencias;
 }
@@ -211,7 +211,7 @@ function get_funcionarios_diurno_matematica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$mate = $mate . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$mate = $mate . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $mate;
 }
@@ -231,7 +231,7 @@ function get_funcionarios_diurno_sociales() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$sociales = $sociales . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$sociales = $sociales . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $sociales;
 }
@@ -251,7 +251,7 @@ function get_funcionarios_diurno_espa() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$espa = $espa . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$espa = $espa . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $espa;
 }
@@ -271,7 +271,7 @@ function get_funcionarios_diurno_orientacion() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$orientacion = $orientacion . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$orientacion = $orientacion . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $orientacion;
 }
@@ -291,7 +291,7 @@ function get_funcionarios_diurno_biblioteca() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$biblio = $biblio . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$biblio = $biblio . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $biblio;
 }
@@ -311,7 +311,7 @@ function get_funcionarios_diurno_jardineria() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$jardineria = $jardineria . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$jardineria = $jardineria . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $jardineria;
 }
@@ -332,7 +332,7 @@ function get_funcionarios_diurno_seguridad() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$seguridad = $seguridad . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$seguridad = $seguridad . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $seguridad;
 }
@@ -353,7 +353,7 @@ function get_funcionarios_diurno_comedor() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$comerdor = $comedor . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$comerdor = $comedor . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $comedor;
 }
@@ -374,7 +374,7 @@ function get_funcionarios_diurno_miscelaneos() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$misc = $misc . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$misc = $misc . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $misc;
 }
@@ -395,7 +395,7 @@ function get_funcionarios_diurno_psicologia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$psi = $psi . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$psi = $psi . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $psi;
 }
@@ -416,7 +416,7 @@ function get_funcionarios_diurno_plasticas() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$art = $art . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$art = $art . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $art;
 }
@@ -437,7 +437,7 @@ function get_funcionarios_diurno_musica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$musica = $musica . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$musica = $musica . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $musica;
 }
@@ -458,7 +458,7 @@ function get_funcionarios_diurno_frances() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$fra = $fra . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$fra = $fra . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $fra;
 }
@@ -479,7 +479,7 @@ function get_funcionarios_diurno_informatica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$info = $info . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$info = $info . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $info;
 }
@@ -500,7 +500,7 @@ function get_funcionarios_diurno_industriales() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -522,7 +522,7 @@ function get_funcionarios_diurno_edvida() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -543,7 +543,7 @@ function get_funcionarios_diurno_edfisica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -564,7 +564,7 @@ function get_funcionarios_diurno_religion() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -584,7 +584,7 @@ function get_funcionarios_diurno_filosofia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -604,7 +604,7 @@ function get_funcionarios_diurno_tecnologia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<h4 style="margin-top: 0px;">' . $title . '</h4>';
+		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
 	endwhile;
 	return $a;
 }

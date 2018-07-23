@@ -33,11 +33,7 @@
 	</header><!-- .entry-header -->
 
 
-	<div class="galleria-content">
-		<?php
-			get_galleria( $post->ID );
-		?>
-	</div>
+
 	<div class="entry-content">
 		<h3> Historia</h3>
 		<div class="matricula"><p>
@@ -48,6 +44,11 @@
 				}
 				?>
 		</p></div>
+		<div class="galleria-content">
+		<?php
+			get_galleria( $post->ID );
+		?>
+		</div>
 		<h3> Información de Servicios</h3>
 		<div class="matricula"><p>
 				<?php
