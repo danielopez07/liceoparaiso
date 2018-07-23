@@ -564,8 +564,7 @@ hr {
 	background-color: #ccc;
 	border: 0;
 	height: 1px;
-	/* margin-bottom: 1.5em; */
-	margin: 2px 0px;
+	/* margin: 2px 0px; */
 }
 
 ul, ol {
@@ -1131,6 +1130,10 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 
 .site-info {
 	text-align: center;
+}
+
+.hr-footer {
+	background-color: #fbdc29;
 }
 
 @media (--wide-menu-query) {

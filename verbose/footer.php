@@ -23,7 +23,7 @@
 	);
 	?>
 	</nav>
-	<hr>
+	<hr class="hr-footer">
 	<div class="site-info">
 		<p> Liceo de Paraíso <span class="sep"> | </span>
 		<a href="https://sandstormagency.com" target="blank">Sandstorm Agency</a> © 
