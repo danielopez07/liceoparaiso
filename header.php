@@ -34,21 +34,27 @@
 				</figure>
 			<?php endif; ?>
 			<div class="site-branding">
-				<?php the_custom_logo(); ?>
-				<?php if ( is_front_page() && is_home() ) : ?>
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-				<?php else : ?>
-					<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
-				<?php endif; ?>
+				<div class="logo-title">
+					<?php the_custom_logo(); ?>
+					<div class="title-description">
+						<?php if ( is_front_page() && is_home() ) : ?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+						<?php else : ?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+						<?php endif; ?>
 
-				<?php $liceoparaiso_description = get_bloginfo( 'description', 'display' ); ?>
-				<?php if ( $liceoparaiso_description || is_customize_preview() ) : ?>
-					<p class="site-description"><?php echo $liceoparaiso_description; /* WPCS: xss ok. */ ?></p>
-				<?php endif; ?>
+						<?php $liceoparaiso_description = get_bloginfo( 'description', 'display' ); ?>
+						<?php if ( $liceoparaiso_description || is_customize_preview() ) : ?>
+							<p class="site-description"><?php echo $liceoparaiso_description; /* WPCS: xss ok. */ ?></p>
+						<?php endif; ?>
+					</div><!-- title-description -->
+				</div>
+
 				<div id="header-social">
 					<div class="social-navigation"><a href="#"><div class="header-button">Iniciar sesión</div></a></div>
 					<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><p><span class="dashicons dashicons-facebook" id="facebook-icon"></span> /liceoparaiso</p></a></div>
-				</div>
+				</div> <!-- header-social-->
+
 			</div><!-- .site-branding -->
 			<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><span class="dashicons dashicons-facebook" id="facebook-fixed"></span></a></div>
 

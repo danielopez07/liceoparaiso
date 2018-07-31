@@ -630,7 +630,7 @@ a {
 } */
 
 a:hover, a:focus, a:active {
-	color: #fbdc29;
+	color: #FFE40D;
 	text-decoration: none;
 }
 
@@ -732,7 +732,7 @@ textarea {
 --------------------------------------------------------------*/
 
 .site-header {
-	padding-bottom: 1em;
+	/* padding-bottom: 1em; */
 	color: #4472c4!important;
 }
 
@@ -756,7 +756,7 @@ textarea {
 
 .site-branding {
 	text-align: center;
-	padding: 1em 0 1em;
+	padding: .4em 0;
 	background-color: #4472c4;
 	color: #fff;
 }
@@ -766,13 +766,12 @@ textarea {
 .site-branding a:hover,
 .site-branding a:focus,
 .site-branding a:active {
-	color: #fbdc29;
+	color: #FFE40D;
 }
 
 .site-title {
 	margin: 0 1em;
 	font-size: 38px;
-	/* font-weight: bold; */
 	line-height: 1.2;
 	font-family: 'Frank Ruhl Libre', mono;
 }
@@ -858,9 +857,10 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 
 .header-button {
 	margin: 2px;
-	background-color: orangered;
+	background-color: #E87D0C;
 	border-radius: 5px;
 	color: white;
+	padding: 4px 0;
 }
 
 @media screen and (min-width: 37.5em) {
@@ -884,6 +884,23 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 		        align-items: center;
 	}
 
+	.logo-title {
+		display: -webkit-box;
+		display: -ms-flexbox;
+		display: flex;
+		-webkit-box-align: center;
+		    -ms-flex-align: center;
+		        align-items: center;
+	}
+
+	.title-description {
+		text-align: left;
+	}
+
+	.site-title {
+		margin: 0;
+	}
+
 }
 
 /*--------------------------------------------------------------
@@ -892,7 +909,7 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 .main-navigation {
 	clear: both;
 	display: block;
-	margin: 0 auto 2em;
+	margin: 0 auto;
 	padding: 0 1em;
 	/* max-width: calc(var(--content-width) * 16)px;*/ /* Fallback for older browsers. */
 	/* max-width: var(--content-width)rem; */
@@ -1157,7 +1174,7 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 .site-info a:hover,
 .site-info a:focus,
 .site-info a:active {
-	color: #fbdc29;
+	color: #FFE40D;
 }
 
 .footer-menu li {
@@ -1169,7 +1186,7 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 }
 
 .hr-footer {
-	background-color: #fbdc29;
+	background-color: #FFE40D;
 }
 
 @media screen and (min-width: 37.5em) {
