@@ -150,8 +150,8 @@ function get_funcionarios_diurno_administrativo() {
 	while ( $funcionarios->have_posts() ) :
 		$funcionarios->the_post();
 		// Set variables.
-		$title    = get_the_title();
-		$admin = $admin . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$title = get_the_title();
+		$admin = $admin . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $admin;
@@ -172,7 +172,7 @@ function get_funcionarios_diurno_ingles() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$ingles = $ingles . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$ingles = $ingles . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $ingles;
@@ -193,7 +193,7 @@ function get_funcionarios_diurno_ciencias() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$ciencias = $ciencias . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$ciencias = $ciencias . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $ciencias;
@@ -214,7 +214,7 @@ function get_funcionarios_diurno_matematica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$mate = $mate . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$mate = $mate . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $mate;
@@ -235,7 +235,7 @@ function get_funcionarios_diurno_sociales() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$sociales = $sociales . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$sociales = $sociales . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $sociales;
@@ -256,7 +256,7 @@ function get_funcionarios_diurno_espa() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$espa = $espa . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$espa = $espa . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $espa;
@@ -277,7 +277,7 @@ function get_funcionarios_diurno_orientacion() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$orientacion = $orientacion . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$orientacion = $orientacion . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $orientacion;
@@ -298,7 +298,7 @@ function get_funcionarios_diurno_biblioteca() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$biblio = $biblio . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$biblio = $biblio . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $biblio;
@@ -319,7 +319,7 @@ function get_funcionarios_diurno_jardineria() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$jardineria = $jardineria . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$jardineria = $jardineria . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $jardineria;
@@ -341,7 +341,7 @@ function get_funcionarios_diurno_seguridad() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$seguridad = $seguridad . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$seguridad = $seguridad . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $seguridad;
@@ -363,7 +363,7 @@ function get_funcionarios_diurno_comedor() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$comerdor = $comedor . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$comerdor = $comedor . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $comedor;
@@ -385,7 +385,7 @@ function get_funcionarios_diurno_miscelaneos() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$misc = $misc . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$misc = $misc . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $misc;
@@ -407,7 +407,7 @@ function get_funcionarios_diurno_psicologia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$psi = $psi . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$psi = $psi . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $psi;
@@ -429,7 +429,7 @@ function get_funcionarios_diurno_plasticas() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$art = $art . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$art = $art . '	<p>' . $title . '</p>';
 	endwhile;
 	return $art;
 }
@@ -450,7 +450,7 @@ function get_funcionarios_diurno_musica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$musica = $musica . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$musica = $musica . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $musica;
@@ -472,7 +472,7 @@ function get_funcionarios_diurno_frances() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$fra = $fra . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$fra = $fra . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $fra;
@@ -494,7 +494,7 @@ function get_funcionarios_diurno_informatica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$info = $info . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$info = $info . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $info;
@@ -516,7 +516,7 @@ function get_funcionarios_diurno_industriales() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -538,7 +538,7 @@ function get_funcionarios_diurno_edvida() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $a;
@@ -560,7 +560,7 @@ function get_funcionarios_diurno_edfisica() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -581,7 +581,7 @@ function get_funcionarios_diurno_religion() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $a;
@@ -602,7 +602,7 @@ function get_funcionarios_diurno_filosofia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	return $a;
 }
@@ -622,7 +622,7 @@ function get_funcionarios_diurno_tecnologia() {
 		$funcionarios->the_post();
 		// Set variables.
 		$title    = get_the_title();
-		$a = $a . '	<p style="margin-top: 0px;">' . $title . '</p>';
+		$a = $a . '	<p>' . $title . '</p>';
 	endwhile;
 	wp_reset_postdata();
 	return $a;

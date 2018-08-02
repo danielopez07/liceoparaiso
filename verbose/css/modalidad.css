@@ -10,7 +10,7 @@
 
 .w3-container{
 	border-style: solid;
-	border-color: #000;
+	border-color: #4472C4;
 	border-width: 1px;
 	border-radius: 5px;
 }
@@ -80,6 +80,9 @@
 	display:block;
 	outline:0
 }
+.w3-bar-item:hover {
+	background-color: #f8840b;
+}
 .w3-bar .w3-dropdown-hover,.w3-bar .w3-dropdown-click{
 	position:static;
 	float:left
@@ -99,10 +102,20 @@
 	outline:0;
 }
 .w3-red,.w3-hover-red:hover{
-	color:#fff!important;
-	background-color:#f44336!important;
+	/* color:#fff!important; */
+	background-color:#E87D0C;
 }
-.w3-black,.w3-hover-black:hover{
+.w3-black/*,.w3-hover-black:hover*/{
 	color:#fff!important;
-	background-color:#000!important
+	background-color:#4472C4;
+}
+
+.w3-cont {
+	display: grid;
+	grid-template-columns: 1fr;
+}
+@media screen and (min-width: 37.5em) {
+	.w3-cont {
+		grid-template-columns: 1fr 1fr;
+	}
 }
