@@ -29,13 +29,13 @@ function get_reglamentos( $post_ID ) {
 
 	<article class="reglamentos-container">
 		<?php
-		$documentos = [
+		$documentos = array(
 			get_field( 'reglamento1', $post_ID ),
 			get_field( 'reglamento2', $post_ID ),
 			get_field( 'reglamento3', $post_ID ),
 			get_field( 'reglamento4', $post_ID ),
 			get_field( 'reglamento5', $post_ID ),
-		];
+		);
 		?>
 
 		<div class="reglamentos">
@@ -44,8 +44,14 @@ function get_reglamentos( $post_ID ) {
 			foreach ( $documentos as $value ) {
 				if ( $value ) {
 				?>
-					<a href="<?php echo esc_html( $value['url'] ); ?>" target="blank"><?php echo esc_html( $value['title'] ); ?></a>
+				<a href="<?php echo esc_html( $value['url'] ); ?>" target="blank">
+				<div class="boton-reglamento">
+					<span class="icono-reglamento dashicons dashicons-media-text"></span>
 					<br>
+					<?php echo esc_html( $value['title'] ); ?>
+				</div>
+				</a>
+				<br>
 				<?php
 				}
 			}
@@ -68,8 +74,14 @@ function get_reglamentos( $post_ID ) {
 			foreach ( $documentos as $value ) {
 				if ( $value ) {
 				?>
-					<a href="<?php echo esc_html( $value['url'] ); ?>" target="blank"><?php echo esc_html( $value['title'] ); ?></a>
+				<a href="<?php echo esc_html( $value['url'] ); ?>" target="blank">
+				<div class="boton-reglamento">
+					<span class="icono-reglamento dashicons dashicons-media-text"></span>
 					<br>
+					<?php echo esc_html( $value['title'] ); ?>
+				</div>
+				</a>
+				<br>
 				<?php
 				}
 			}

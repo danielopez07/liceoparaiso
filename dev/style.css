@@ -806,14 +806,12 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	/* color: #5a4141; */
 }
 
 #header-social {
 	display: flex;
 	flex-direction: column;
-	max-width: 150px;
-	margin: auto;
+	justify-content: center;
 }
 
 #facebook-icon {
@@ -835,7 +833,8 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 }
 
 .social-navigation {
-	font-family: Roboto Condensed,sans-serif;
+	font-size: .8em;
+	margin: .2em auto;
 }
 
 .social-navigation a {
@@ -847,7 +846,10 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 	background-color: #E87D0C;
 	border-radius: 5px;
 	color: white;
-	padding: 4px 0;
+	padding: 4px .7em;
+}
+.header-button:hover {
+	background-color: #f8840b;
 }
 
 @media (--wide-menu-query) {
@@ -863,7 +865,6 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 	.site-branding {
 		display: flex;
 		justify-content: space-around;
-		align-items: center;
 	}
 
 	.logo-title {
@@ -873,6 +874,9 @@ http://clubmate.fi/leverage-the-current_page_item-class-when-listing-custom-post
 
 	.title-description {
 		text-align: left;
+		display: flex;
+		flex-direction: column;
+		justify-content: center;
 	}
 
 	.site-title {

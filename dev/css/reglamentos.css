@@ -25,6 +25,18 @@
 .reglamentos h3,
 .protocolos h3 {
 	color: #fff;
+	border-bottom: solid;
+}
+
+.boton-reglamento {
+	padding: .5em;
+	border-bottom: solid 1px;
+	border-color: #FFF;
+}
+.icono-reglamento {
+	vertical-align: text-top;
+	font-size: 3em;
+	display: inline;
 }
 
 @media (--wide-menu-query) {

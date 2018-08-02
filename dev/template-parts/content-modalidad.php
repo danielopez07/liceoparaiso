@@ -45,9 +45,6 @@
 		} else {
 			get_funcionarios_vocacional( $titulo );
 		}
-		// $modalidad = new WP_Query( array( 'post_type' => 'modalidad' ) );
-		// $modalidad->the_post();
-		// este fue el query culpable! XD
 		?>
 
 		<h3> Reseña histórica </h3>
