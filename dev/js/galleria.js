@@ -31,3 +31,8 @@ function showSlides(n) {
   slides[slideIndex-1].style.display = "block";
   dots[slideIndex-1].className += " lp-active";
 }
+
+function moveSlides(){
+  setTimeout(plusSlides(1), 2000); // Change image every 2 seconds
+}
+moveSlides();
