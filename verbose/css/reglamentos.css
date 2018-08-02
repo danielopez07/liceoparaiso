@@ -5,9 +5,26 @@
 .reglamentos,
 .protocolos {
 	text-align: center;
-	background-color: antiquewhite;
+	background-color: #4472C4;
 	padding: 0 1em 1em;
 	border-radius: 5px;
+}
+.reglamentos a,
+.protocolos a {
+	/* color: #E87D0C; */
+	color: #fff;
+}
+.reglamentos a:hover,
+.reglamentos a:focus,
+.reglamentos a:active,
+.protocolos a:hover,
+.protocolos a:focus,
+.protocolos a:active {
+	color: #FFE40D;
+}
+.reglamentos h3,
+.protocolos h3 {
+	color: #fff;
 }
 
 @media screen and (min-width: 37.5em) {

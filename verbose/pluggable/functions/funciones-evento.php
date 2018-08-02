@@ -53,37 +53,37 @@ function get_eventos() {
 	// ordenamos el array por fechas
 	asort( $arr_eventos );
 
+	?>
+	<article class="eventos-tiles">
+	<?php
 	foreach ( $arr_eventos as $post_ID => $fecha ) {
 		?>
-		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>
+		<article <?php post_class(); ?>>
+
+			<?php $evento = get_post( $post_ID ); ?>
+
 			<header class="entry-header">
-			<?php
-				$evento = get_post( $post_ID );
-			?>
-			<h3>
-				<?php
-				echo wp_kses_post( $evento->post_title );
-				?>
-			</h3>
-			<?php
-				print_formated_date( $evento->fecha );
-				echo wp_kses_post( $evento->post_content );
-				echo wp_kses_post( $evento->post_thumbnail );
-				the_post_thumbnail( $evento );
-			?>
+				<h3><?php echo wp_kses_post( $evento->post_title ); ?></h3>
+			</header>
+			<?php print_formated_date( $evento->fecha ); ?>
 
 			<img src="<?php echo esc_html( $arr_imags[ $post_ID ] ); ?>" class="image-evento" alt="<?php echo esc_html( $arr_capts[ $post_ID ] ); ?>">
 
-			<hr>
+			<article class="content-evento">
+				<?php echo wp_kses_post( $evento->post_content ); ?>
+			</article>
 
 			<?php
+			// echo wp_kses_post( $evento->post_thumbnail );
+			// the_post_thumbnail( $evento );
+
 			// $evento = new WP_Query( array( 'p' => (int) $post_ID ) );
 			// while ( $evento->have_posts() ) :
 			// 	$evento->the_post();
 			// 	echo get_the_title();
 			// endwhile;
 			// wp_reset_postdata();
-			
+
 			// intento con wp_query, para no tener que usar array para imagenes,
 			// pero no funciono
 			?>
@@ -91,4 +91,7 @@ function get_eventos() {
 		</article><!-- #post -->
 		<?php
 	}
+	?>
+	</article><!-- eventos-tiles-->
+	<?php
 }

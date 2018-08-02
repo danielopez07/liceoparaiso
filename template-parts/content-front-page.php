@@ -19,7 +19,6 @@
 
 <article class="eventos">
 	<h2>Eventos</h2>
-
 	<?php
 	get_eventos();
 	?>
