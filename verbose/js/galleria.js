@@ -1,4 +1,4 @@
-"use strict";
+'use strict';
 
 /**
  * File galleria.js.
@@ -6,7 +6,9 @@
  * Handles the gallery functionality using the code from https://www.w3schools.com/howto/howto_js_slideshow.asp
  */
 var slideIndex = 1;
-showSlides(slideIndex);
+moveSlides();
+
+// moveSlides();
 
 // Next/previous controls
 function plusSlides(n) {
@@ -20,25 +22,25 @@ function currentSlide(n) {
 
 function showSlides(n) {
   var i;
-  var slides = document.getElementsByClassName("lp-mySlides");
-  var dots = document.getElementsByClassName("lp-dot");
+  var slides = document.getElementsByClassName('lp-mySlides');
+  var dots = document.getElementsByClassName('lp-dot');
   if (n > slides.length) {
     slideIndex = 1;
   }
-  if (n < 1) {
+  if (1 > n) {
     slideIndex = slides.length;
   }
   for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
+    slides[i].style.display = 'none';
   }
   for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" lp-active", "");
+    dots[i].className = dots[i].className.replace(' lp-active', '');
   }
-  slides[slideIndex - 1].style.display = "block";
-  dots[slideIndex - 1].className += " lp-active";
+  slides[slideIndex - 1].style.display = 'block';
+  dots[slideIndex - 1].className += ' lp-active';
 }
 
 function moveSlides() {
-  setTimeout(plusSlides(1), 2000); // Change image every 2 seconds
+  plusSlides(1);
+  setTimeout(moveSlides, 5000); // Change image every 5 seconds
 }
-moveSlides();
