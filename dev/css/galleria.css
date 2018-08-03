@@ -5,49 +5,63 @@
  * {box-sizing:border-box}
 
  .galleria-content {
-	max-width: 100%;
-	max-height: 65%;
-	margin: auto;
+	height: 70vh;
+	width: 100%;
 }
 
 /* Slideshow container */
 .lp-slideshow-container {
 	display: flex;
-	height: 450px;
-	width: 100%;
-	background-color: #000;
-	position: relative;
-	margin: auto;
-}
-
-/* Images inside the Slideshow container */
-.lp-mySlides img{
-	max-height: inherit;
-	max-width: none;
-	margin: auto;
-}
-@media (--wide-menu-query) {
-	.lp-mySlides img{
-		max-height: none;
-	}
-}
-
-/* Hide the images by default */
-.lp-mySlides {
-	display: none;
-	max-height: 450px;
-	max-width: 100%;
 	position: relative;
 	margin: auto;
 	overflow: hidden;
 }
 
+/* Slideshow */
+.lp-mySlides {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	overflow: hidden;
+	max-height: 65vh;
+	max-width: 100%;
+}
+
+/* Images inside the Slideshow container */
+.lp-mySlides img{
+	max-width: none;
+	margin-left: 50%;
+	transform: translateX(-50%);
+	height: 65vh;
+}
+
+@media (--wide-menu-query) {
+	.lp-mySlides img{
+		max-height: none;
+		max-width: 100%;
+		margin-top: 50%;
+		transform: translateY(-100%) translateX(-50%);
+		height: auto;
+	}
+}
+
+/* Hide the images by default */
+/* .lp-mySlides {
+	display: block;
+	max-height: 65vh;
+	max-width: 100%;
+	position: relative;
+	margin: auto;
+	overflow: hidden;
+} */
+
 /* Next & previous buttons */
 .lp-prev, .lp-next {
-  background-color: #000;
+  /* background-color: #000; */
   cursor: pointer;
   position: absolute;
   height: 100%;
+  width: 100px;
   padding: 1%;
   color: white;
   font-weight: bold;
@@ -55,11 +69,14 @@
   transition: 0.6s ease;
   border-radius: 0 3px 3px 0;
   filter: alpha(opacity=70);
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.flechita{
+/* .flechita{
   margin-top: 210px;
-}
+} */
 
 
 /* Position the "next button" to the right */
@@ -69,15 +86,16 @@
 }
 
 /* On hover, add a black background color with a little bit see-through */
-.lp-prev:hover, .lp-next:hover {
+/* .lp-prev:hover, .lp-next:hover {
 	color: #3B58B8;
 	text-decoration: none;
-}
+} */
 
 /* Caption text */
 .lp-text {
 	color: #f2f2f2;
-	font-size: 15px;
+	background-color: #71717187;
+	font-size: 1.5rem;
 	padding: 8px 12px;
 	position: absolute;
 	bottom: 8px;
@@ -85,14 +103,6 @@
 	text-align: center;
 }
 
-/* Number text (1/3 etc) */
-.lp-numbertext {
-	color: #f2f2f2;
-	font-size: 12px;
-	padding: 8px 12px;
-	position: absolute;
-	top: 0;
-}
 
 /* The dots/bullets/indicators */
 .lp-dot{
@@ -108,6 +118,7 @@
 
 .lp-dots{
   text-align: center;
+  display: block;
 }
 
 .lp-active, .lp-dot:hover {

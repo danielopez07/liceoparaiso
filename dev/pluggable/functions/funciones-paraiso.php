@@ -14,7 +14,7 @@
 function get_custom_image_1( $post_id = '' ) {
 	$image_id = intval( get_post_meta( $post_id, 'imagen_1', true ) );
 	if ( $image_id ) {
-		$image = wp_get_attachment_image_src( $image_id, 'large' );
+		$image = wp_get_attachment_image_src( $image_id, 'full' );
 		if ( $image ) {
 			return $image[0];
 		}
@@ -24,7 +24,7 @@ function get_custom_image_1( $post_id = '' ) {
 function get_custom_image_2( $post_id = '' ) {
 	$image_id = intval( get_post_meta( $post_id, 'imagen_2', true ) );
 	if ( $image_id ) {
-		$image = wp_get_attachment_image_src( $image_id, 'large' );
+		$image = wp_get_attachment_image_src( $image_id, 'full' );
 		if ( $image ) {
 			return $image[0];
 		}
@@ -34,7 +34,7 @@ function get_custom_image_2( $post_id = '' ) {
 function get_custom_image_3( $post_id = '' ) {
 	$image_id = intval( get_post_meta( $post_id, 'imagen_3', true ) );
 	if ( $image_id ) {
-		$image = wp_get_attachment_image_src( $image_id, 'large' );
+		$image = wp_get_attachment_image_src( $image_id, 'full' );
 		if ( $image ) {
 			return $image[0];
 		}
@@ -44,7 +44,7 @@ function get_custom_image_3( $post_id = '' ) {
 function get_custom_image_4( $post_id = '' ) {
 	$image_id = intval( get_post_meta( $post_id, 'imagen_4', true ) );
 	if ( $image_id ) {
-		$image = wp_get_attachment_image_src( $image_id, 'large' );
+		$image = wp_get_attachment_image_src( $image_id, 'full' );
 		if ( $image ) {
 			return $image[0];
 		}
