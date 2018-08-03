@@ -32,8 +32,6 @@
 		?>
 	</header><!-- .entry-header -->
 
-
-
 	<div class="entry-content">
 		<h3> Historia</h3>
 		<div class="matricula"><p>

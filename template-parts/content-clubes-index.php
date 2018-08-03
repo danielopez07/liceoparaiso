@@ -40,26 +40,21 @@
 	<article class="lista-clubes">
 		<?php
 		$query = new WP_Query( array( 'post_type' => 'club' ) );
-		?>
-		<ul>
-			<?php
-			while ( $query->have_posts() ) :
-				?>
-				<li>
-					<?php
-					$query->the_post();
-					?>
-					<a href="<?php echo esc_html( get_permalink() ); ?>">
-						<?php
-						the_title();
-						?>
-					</a>
-				</li>
-				<?php
-			endwhile;
+
+		while ( $query->have_posts() ) :
+			$query->the_post();
 			?>
-		</ul>
-		<?php wp_reset_postdata(); ?>
+			<a href="<?php echo esc_html( get_permalink() ); ?>">
+				<?php
+				the_title();
+				the_field( 'imagen_1' );
+				?>
+			</a>
+			<br>
+			<?php
+		endwhile;
+
+		wp_reset_postdata(); ?>
 	</article>
 
 </article><!-- #post-<?php the_ID(); ?> -->

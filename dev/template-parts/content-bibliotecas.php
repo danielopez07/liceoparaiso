@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package liceoparaiso
+ * @package wprig
  */
 
 ?>
@@ -22,17 +22,15 @@
 		?>
 			<div class="entry-meta">
 				<?php
-					liceoparaiso_posted_on();
-					liceoparaiso_posted_by();
-					liceoparaiso_comments_link();
+					wprig_posted_on();
+					wprig_posted_by();
+					wprig_comments_link();
 				?>
 			</div><!-- .entry-meta -->
 		<?php
 		endif;
 		?>
 	</header><!-- .entry-header -->
-
-
 
 	<div class="entry-content">
 		<h3> Historia</h3>

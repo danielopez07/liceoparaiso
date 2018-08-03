@@ -32,33 +32,43 @@
 		?>
 	</header><!-- .entry-header -->
 
-
-
 	<div class="entry-content">
-		<h3> Historia</h3>
-		<div class="matricula"><p>
+		<h3> Ruta 1</h3>
+		<div class="descripciontransporte"><p>
 				<?php
-				$value = get_field( 'historia', $post->ID );
+				$value = get_field( 'descripion1', $post->ID );
 				if ( $value ) {
 					echo $value;
 				}
 				?>
 		</p></div>
-		<div class="galleria-content">
-		<?php
-			get_galleria( $post->ID );
-		?>
+		<div class="mapa">
+			<img src="<?php get_map1( $post->ID ); ?>" >
 		</div>
-		<h3> Información de Servicios</h3>
-		<div class="matricula"><p>
+		<h3> Ruta 2</h3>
+		<div class="descripciontransporte"><p>
 				<?php
-				$value = get_field( 'servicios', $post->ID );
+				$value = get_field( 'descripion2', $post->ID );
 				if ( $value ) {
 					echo $value;
 				}
 				?>
 		</p></div>
-
+		<div class="mapa">
+			<img src="<?php get_map2( $post->ID ); ?>" >
+		</div>
+		<h3> Ruta 3</h3>
+		<div class="descripciontransporte"><p>
+				<?php
+				$value = get_field( 'descripion3', $post->ID );
+				if ( $value ) {
+					echo $value;
+				}
+				?>
+		</p></div>
+		<div class="mapa">
+			<img src="<?php get_map3( $post->ID ); ?>" >
+		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->

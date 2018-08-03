@@ -33,31 +33,24 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<?php
-			$titulo2 = get_the_title();
-			get_funcionarios( $titulo2 );
-			$modalidad = new WP_Query( array( 'post_type' => 'modalidad' ) );
-			$modalidad->the_post();
-		?>
-
-		<h3> Reseña histórica </h3>
-		<div class="resena"><p>
-			<?php
-			$value = get_field( 'resena', $post->ID );
-			if ( $value ) :
-				echo $value;
-			else :
-				echo 'No llega el valor';
-			endif;
-			?>
-		</p></div>
-
-		<?php liceoparaiso_post_thumbnail(); ?>
-
-		<h3> Información de matrícula</h3>
+		<h3> Historia</h3>
 		<div class="matricula"><p>
 				<?php
-				$value = get_field( 'matricula', $post->ID );
+				$value = get_field( 'historia', $post->ID );
+				if ( $value ) {
+					echo $value;
+				}
+				?>
+		</p></div>
+		<div class="galleria-content">
+		<?php
+			get_galleria( $post->ID );
+		?>
+		</div>
+		<h3> Información de Servicios</h3>
+		<div class="matricula"><p>
+				<?php
+				$value = get_field( 'servicios', $post->ID );
 				if ( $value ) {
 					echo $value;
 				}
@@ -66,11 +59,4 @@
 
 	</div><!-- .entry-content -->
 
-	<footer class="entry-footer">
-		<?php
-		liceoparaiso_post_categories();
-		liceoparaiso_post_tags();
-		liceoparaiso_edit_post_link();
-		?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
