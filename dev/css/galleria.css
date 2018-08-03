@@ -20,8 +20,6 @@
 /* Slideshow */
 .lp-mySlides {
 	display: flex;
-	justify-content: center;
-	align-items: center;
 	overflow: hidden;
 	max-height: 65vh;
 	max-width: 100%;
@@ -42,18 +40,9 @@
 		margin-top: 50%;
 		transform: translateY(-100%) translateX(-50%);
 		height: auto;
+		min-width: 100vw;
 	}
 }
-
-/* Hide the images by default */
-/* .lp-mySlides {
-	display: block;
-	max-height: 65vh;
-	max-width: 100%;
-	position: relative;
-	margin: auto;
-	overflow: hidden;
-} */
 
 /* Next & previous buttons */
 .lp-prev, .lp-next {

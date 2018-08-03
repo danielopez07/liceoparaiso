@@ -24,12 +24,6 @@
 	display: -webkit-box;
 	display: -ms-flexbox;
 	display: flex;
-	-webkit-box-pack: center;
-	    -ms-flex-pack: center;
-	        justify-content: center;
-	-webkit-box-align: center;
-	    -ms-flex-align: center;
-	        align-items: center;
 	overflow: hidden;
 	max-height: 65vh;
 	max-width: 100%;
@@ -52,18 +46,9 @@
 		-webkit-transform: translateY(-100%) translateX(-50%);
 		        transform: translateY(-100%) translateX(-50%);
 		height: auto;
+		min-width: 100vw;
 	}
 }
-
-/* Hide the images by default */
-/* .lp-mySlides {
-	display: block;
-	max-height: 65vh;
-	max-width: 100%;
-	position: relative;
-	margin: auto;
-	overflow: hidden;
-} */
 
 /* Next & previous buttons */
 .lp-prev, .lp-next {
