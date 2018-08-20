@@ -115,12 +115,33 @@
 	background-color:#4472C4;
 }
 
+.color-fondo {
+	background-color: #FAF5f5;
+	padding-top: 1.5em;
+}
+
 .w3-cont {
 	display: grid;
 	grid-template-columns: 1fr;
+	padding: 0 1em;
 }
+.imagen-area {
+	height: 80vh;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-color: #FAF5f5;
+	margin: 1em 0 0;
+	padding: 0;
+	max-width: unset;
+}
+
+
 @media (--wide-menu-query) {
 	.w3-cont {
 		grid-template-columns: 1fr 1fr;
+	}
+	.imagen-area {
+		background-attachment: fixed;
 	}
 }

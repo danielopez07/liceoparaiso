@@ -3,8 +3,10 @@
  */
 
 .eventos {
-	margin: 0 1em;
+	padding: 1em;
+	margin-top: 1em;
 	text-align: center;
+	background-color: #faf5f5;
 }
 
 .image-evento {
@@ -28,7 +30,8 @@
 
 @media screen and (min-width: 37.5em) {
 	.eventos {
-		margin: 0 2em;
+		padding: 1em 2em;
+		background-color: #faf5f5;
 	}
 
 	.eventos-tiles {

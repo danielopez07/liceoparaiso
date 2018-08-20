@@ -9,7 +9,7 @@
 
 ?>
 
-<?php 
+<?php
 	wp_print_styles( array( 'wprig-modalidad', 'wprig-reglamentos' ) ); // Note: If this was already done it will be skipped.
 ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -46,35 +46,26 @@
 			get_funcionarios_vocacional( $titulo );
 		}
 		?>
+	</div>
 
-		<h3> Reseña histórica </h3>
-		<div class="resena"><p>
-			<?php
-			$value = get_field( 'resena', $post->ID );
-			if ( $value ) :
-				echo $value;
-			else :
-				echo 'No llega el valor';
-			endif;
-			?>
-		</p></div>
+	<div class="imagen-area" style="background-image: url(<?php the_post_thumbnail_url(); ?>);"></div>
 
-		<?php wprig_post_thumbnail(); ?>
-
+	<div class="color-fondo"><article class="matricula entry-content">
 		<h3> Información de matrícula</h3>
-		<div class="matricula"><p>
-				<?php
-				$value = get_field( 'matricula', $post->ID );
-				if ( $value ) {
-					echo $value;
-				}
-				?>
-		</p></div>
+		<p>
+			<?php
+			$value = get_field( 'matricula', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+		</p>
+	</article></div>
 
+	<div class="entry-content">
 		<?php
 		get_reglamentos( $post->ID );
 		?>
-
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
