@@ -2,6 +2,10 @@
  * Custom styles for the modalidad custom template.
  */
 
+/* .entry-content{
+	padding: 0;
+} */
+
 .matricula p, .matricula ul{
 	max-width: 720px;
 	overflow: hidden;
