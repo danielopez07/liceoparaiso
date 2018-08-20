@@ -1,0 +1,13 @@
+/**
+ * Custom styles para el index de los clubes.
+ */
+
+.lista-clubes{
+	margin: 1em auto;
+}
+
+@media screen and (min-width: 37.5em) {
+	.lista-clubes{
+		margin: 1em 4em;
+	}
+}

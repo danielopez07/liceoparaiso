@@ -135,7 +135,6 @@
 	max-width: unset;
 }
 
-
 @media screen and (min-width: 37.5em) {
 	.w3-cont {
 		grid-template-columns: 1fr 1fr;

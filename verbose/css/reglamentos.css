@@ -39,6 +39,10 @@
 	display: inline;
 }
 
+.reglamentos-container {
+	margin: 1em auto;
+}
+
 @media screen and (min-width: 37.5em) {
 	.reglamentos-container {
 		width: 100%;

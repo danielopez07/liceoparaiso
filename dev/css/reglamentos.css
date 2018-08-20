@@ -39,6 +39,10 @@
 	display: inline;
 }
 
+.reglamentos-container {
+	margin: 1em auto;
+}
+
 @media (--wide-menu-query) {
 	.reglamentos-container {
 		width: 100%;
