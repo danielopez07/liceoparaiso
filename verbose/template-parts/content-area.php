@@ -39,11 +39,11 @@
 		<?php
 		$titulo = get_the_title();
 		if ( 'Diurno' === $titulo ) {
-			get_funcionarios_diurno( $titulo );
+			get_funcionarios_diurno();
 		} elseif ( 'Nocturno' === $titulo ) {
-			get_funcionarios_nocturno( $titulo );
+			get_funcionarios_nocturno();
 		} else {
-			get_funcionarios_vocacional( $titulo );
+			get_funcionarios_plan_nacional();
 		}
 		?>
 	</div>
