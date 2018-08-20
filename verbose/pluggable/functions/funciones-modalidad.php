@@ -334,7 +334,7 @@ function get_funcionarios_diurno_jardineria() {
 function get_funcionarios_diurno_seguridad() {
 	$funcionarios = new WP_Query( array(
 		'post_type'      => 'funcionarios',
-		'tag'            => 'Diurno+Segeuridad',
+		'tag'            => 'Diurno+Seguridad',
 	) );
 	$seguridad = '';
 	while ( $funcionarios->have_posts() ) :
@@ -616,6 +616,1254 @@ function get_funcionarios_diurno_tecnologia() {
 	$funcionarios = new WP_Query( array(
 		'post_type'      => 'funcionarios',
 		'tag'            => 'Diurno+Tecnología',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+
+/**
+ * Sets the tabs for the Funcionarios with the Nocturno Category.
+ * https://www.w3schools.com/w3css/w3css_tabulators.asp
+ */
+function get_funcionarios_nocturno() {
+	$funcionarios = '
+	<div class="w3-container">
+	
+		<div class="w3-bar w3-black">
+			<button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,' . "'Administrativo'" . ')">Administrativo</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Ingles'" . ')">Inglés</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Ciencias'" . ')">Ciencias</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Matematicas'" . ')">Matemática</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Sociales'" . ')">Estudios Sociales</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Espanol'" . ')">Español</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Orientacion'" . ')">Orientación</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Biblioteca'" . ')">Biblioteca</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Jardineria'" . ')">Jardinería</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Seguridad'" . ')">Seguridad</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Comedor'" . ')">Comedor</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Miscelaneos'" . ')">Misceláneos</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Psicologia'" . ')">Psicología</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Plasticas'" . ')">Artes Plásticas</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Musica'" . ')">Música</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Frances'" . ')">Francés</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Informatica'" . ')">Informática</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Industriales'" . ')">Industriales</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'EdVida'" . ')">Vida Cotidiana</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'EdFisica'" . ')">Educación Física</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Religion'" . ')">Religión</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Filosofia'" . ')">Filosofía</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Tecnologia'" . ')">Tecnología</button>
+
+		</div>
+	
+		<div id="Administrativo" class="w3-cont w3-border city">
+			' . get_funcionarios_nocturno_administrativo() . '
+		</div>
+
+		<div id="Ingles" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_ingles() . '
+		</div>
+
+		<div id="Ciencias" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_ciencias() . '
+		</div>
+
+		<div id="Matematicas" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_matematica() . '
+		</div>
+
+		<div id="Sociales" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_sociales() . '
+		</div>
+
+		<div id="Espanol" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_espa() . '
+		</div>
+
+		<div id="Orientacion" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_orientacion() . '
+		</div>
+
+		<div id="Biblioteca" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_biblioteca() . '
+		</div>
+
+		<div id="Jardineria" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_jardineria() . '
+		</div>
+
+		<div id="Seguridad" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_seguridad() . '
+		</div>
+
+		<div id="Comedor" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_comedor() . '
+		</div>
+
+		<div id="Miscelaneos" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_miscelaneos() . '
+		</div>
+
+		<div id="Psicologia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_psicologia() . '
+		</div>
+
+		<div id="Plasticas" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_plasticas() . '
+		</div>
+
+		<div id="Musica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_musica() . '
+		</div>
+
+		<div id="Frances" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_frances() . '
+		</div>
+
+		<div id="Informatica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_informatica() . '
+		</div>
+
+		<div id="Industriales" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_industriales() . '
+		</div>
+
+		<div id="EdVida" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_edvida() . '
+		</div>
+
+		<div id="EdFisica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_edfisica() . '
+		</div>
+
+		<div id="Religion" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_sociales() . '
+		</div>
+
+		<div id="Filosofia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_filosofia() . '
+		</div>
+
+		<div id="Tecnologia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_nocturno_tecnologia() . '
+		</div>
+	</div>
+	 ';
+	echo $funcionarios;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that belong to the Management Function.
+ */
+function get_funcionarios_nocturno_administrativo() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Administrativo',
+	) );
+	$admin = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title = get_the_title();
+		$admin = $admin . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $admin;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that teach english.
+ */
+function get_funcionarios_nocturno_ingles() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Inglés',
+	) );
+	$ingles = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$ingles = $ingles . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $ingles;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that teach ciencias.
+ */
+function get_funcionarios_nocturno_ciencias() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Ciencias',
+	) );
+	$ciencias = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$ciencias = $ciencias . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $ciencias;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that teach math.
+ */
+function get_funcionarios_nocturno_matematica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Matemáticas',
+	) );
+	$mate = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$mate = $mate . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $mate;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that teach sociales.
+ */
+function get_funcionarios_nocturno_sociales() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Sociales',
+	) );
+	$sociales = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$sociales = $sociales . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $sociales;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno that teach spanish.
+ */
+function get_funcionarios_nocturno_espa() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Español',
+	) );
+	$espa = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$espa = $espa . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $espa;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - orientación.
+ */
+function get_funcionarios_nocturno_orientacion() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Orientación',
+	) );
+	$orientacion = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$orientacion = $orientacion . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $orientacion;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - biblioteca.
+ */
+function get_funcionarios_nocturno_biblioteca() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Biblioteca',
+	) );
+	$biblio = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$biblio = $biblio . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $biblio;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - jardineria.
+ */
+function get_funcionarios_nocturno_jardineria() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Jardinería',
+	) );
+	$jardineria = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$jardineria = $jardineria . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $jardineria;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Seguridad.
+ */
+function get_funcionarios_nocturno_seguridad() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Seguridad',
+	) );
+	$seguridad = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$seguridad = $seguridad . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $seguridad;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Comedor.
+ */
+function get_funcionarios_nocturno_comedor() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+a',
+	) );
+	$comedor = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$comerdor = $comedor . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $comedor;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - miscelaneo.
+ */
+function get_funcionarios_nocturno_miscelaneos() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+misceláneos',
+	) );
+	$misc = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$misc = $misc . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $misc;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Psicología.
+ */
+function get_funcionarios_nocturno_psicologia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Psicología',
+	) );
+	$psi = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$psi = $psi . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $psi;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - artes plasticas.
+ */
+function get_funcionarios_nocturno_plasticas() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Artes Plásticas',
+	) );
+	$art = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$art = $art . '	<p>' . $title . '</p>';
+	endwhile;
+	return $art;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Musica.
+ */
+function get_funcionarios_nocturno_musica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Musica',
+	) );
+	$musica = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$musica = $musica . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $musica;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Frances.
+ */
+function get_funcionarios_nocturno_frances() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+a',
+	) );
+	$fra = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$fra = $fra . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $fra;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - informatica.
+ */
+function get_funcionarios_nocturno_informatica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Informática',
+	) );
+	$info = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$info = $info . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $info;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Industriales.
+ */
+function get_funcionarios_nocturno_industriales() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Industriales',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Educación para la vida cotidiana.
+ */
+function get_funcionarios_nocturno_edvida() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Educación para la vida cotidiana
+		',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Educación Fisica.
+ */
+function get_funcionarios_nocturno_edfisica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Educación Física',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - religión.
+ */
+function get_funcionarios_nocturno_religion() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Religión',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Filosofía.
+ */
+function get_funcionarios_nocturno_filosofia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Filosofía',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the nocturno - Tecnología.
+ */
+function get_funcionarios_nocturno_tecnologia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Nocturno+Tecnología',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+
+/**
+ * Sets the tabs for the Funcionarios with the Vocacional Category.
+ * https://www.w3schools.com/w3css/w3css_tabulators.asp
+ */
+function get_funcionarios_plan_nacional() {
+	$funcionarios = '
+	<div class="w3-container">
+	
+		<div class="w3-bar w3-black">
+			<button class="w3-bar-item w3-button tablink w3-red" onclick="openCity(event,' . "'Administrativo'" . ')">Administrativo</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Ingles'" . ')">Inglés</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Ciencias'" . ')">Ciencias</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Matematicas'" . ')">Matemática</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Sociales'" . ')">Estudios Sociales</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Espanol'" . ')">Español</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Orientacion'" . ')">Orientación</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Biblioteca'" . ')">Biblioteca</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Jardineria'" . ')">Jardinería</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Seguridad'" . ')">Seguridad</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Comedor'" . ')">Comedor</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Miscelaneos'" . ')">Misceláneos</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Psicologia'" . ')">Psicología</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Plasticas'" . ')">Artes Plásticas</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Musica'" . ')">Música</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Frances'" . ')">Francés</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Informatica'" . ')">Informática</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Industriales'" . ')">Industriales</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'EdVida'" . ')">Vida Cotidiana</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'EdFisica'" . ')">Educación Física</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Religion'" . ')">Religión</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Filosofia'" . ')">Filosofía</button>
+			<button class="w3-bar-item w3-button tablink" onclick="openCity(event,' . "'Tecnologia'" . ')">Tecnología</button>
+
+		</div>
+	
+		<div id="Administrativo" class="w3-cont w3-border city">
+			' . get_funcionarios_plan_nacional_administrativo() . '
+		</div>
+
+		<div id="Ingles" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_ingles() . '
+		</div>
+
+		<div id="Ciencias" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_ciencias() . '
+		</div>
+
+		<div id="Matematicas" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_matematica() . '
+		</div>
+
+		<div id="Sociales" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_sociales() . '
+		</div>
+
+		<div id="Espanol" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_espa() . '
+		</div>
+
+		<div id="Orientacion" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_orientacion() . '
+		</div>
+
+		<div id="Biblioteca" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_biblioteca() . '
+		</div>
+
+		<div id="Jardineria" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_jardineria() . '
+		</div>
+
+		<div id="Seguridad" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_seguridad() . '
+		</div>
+
+		<div id="Comedor" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_comedor() . '
+		</div>
+
+		<div id="Miscelaneos" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_miscelaneos() . '
+		</div>
+
+		<div id="Psicologia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_psicologia() . '
+		</div>
+
+		<div id="Plasticas" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_plasticas() . '
+		</div>
+
+		<div id="Musica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_musica() . '
+		</div>
+
+		<div id="Frances" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_frances() . '
+		</div>
+
+		<div id="Informatica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_informatica() . '
+		</div>
+
+		<div id="Industriales" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_industriales() . '
+		</div>
+
+		<div id="EdVida" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_edvida() . '
+		</div>
+
+		<div id="EdFisica" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_edfisica() . '
+		</div>
+
+		<div id="Religion" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_sociales() . '
+		</div>
+
+		<div id="Filosofia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_filosofia() . '
+		</div>
+
+		<div id="Tecnologia" class="w3-cont w3-border city" style="display:none">
+			' . get_funcionarios_plan_nacional_tecnologia() . '
+		</div>
+	</div>
+	 ';
+	echo $funcionarios;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that belong to the Management Function.
+ */
+function get_funcionarios_plan_nacional_administrativo() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Administrativo',
+	) );
+	$admin = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title = get_the_title();
+		$admin = $admin . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $admin;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that teach english.
+ */
+function get_funcionarios_plan_nacional_ingles() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Inglés',
+	) );
+	$ingles = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$ingles = $ingles . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $ingles;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that teach ciencias.
+ */
+function get_funcionarios_plan_nacional_ciencias() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Ciencias',
+	) );
+	$ciencias = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$ciencias = $ciencias . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $ciencias;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that teach math.
+ */
+function get_funcionarios_plan_nacional_matematica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Matemáticas',
+	) );
+	$mate = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$mate = $mate . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $mate;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that teach sociales.
+ */
+function get_funcionarios_plan_nacional_sociales() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Sociales',
+	) );
+	$sociales = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$sociales = $sociales . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $sociales;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional that teach spanish.
+ */
+function get_funcionarios_plan_nacional_espa() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Español',
+	) );
+	$espa = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$espa = $espa . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $espa;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - orientación.
+ */
+function get_funcionarios_plan_nacional_orientacion() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Orientación',
+	) );
+	$orientacion = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$orientacion = $orientacion . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $orientacion;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - biblioteca.
+ */
+function get_funcionarios_plan_nacional_biblioteca() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Biblioteca',
+	) );
+	$biblio = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$biblio = $biblio . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $biblio;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - jardineria.
+ */
+function get_funcionarios_plan_nacional_jardineria() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Jardinería',
+	) );
+	$jardineria = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$jardineria = $jardineria . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $jardineria;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Seguridad.
+ */
+function get_funcionarios_plan_nacional_seguridad() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Seguridad',
+	) );
+	$seguridad = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$seguridad = $seguridad . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $seguridad;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Comedor.
+ */
+function get_funcionarios_plan_nacional_comedor() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+a',
+	) );
+	$comedor = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$comerdor = $comedor . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $comedor;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - miscelaneo.
+ */
+function get_funcionarios_plan_nacional_miscelaneos() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+misceláneos',
+	) );
+	$misc = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$misc = $misc . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $misc;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Psicología.
+ */
+function get_funcionarios_plan_nacional_psicologia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Psicología',
+	) );
+	$psi = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$psi = $psi . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $psi;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - artes plasticas.
+ */
+function get_funcionarios_plan_nacional_plasticas() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Artes Plásticas',
+	) );
+	$art = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$art = $art . '	<p>' . $title . '</p>';
+	endwhile;
+	return $art;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Musica.
+ */
+function get_funcionarios_plan_nacional_musica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Musica',
+	) );
+	$musica = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$musica = $musica . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $musica;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Frances.
+ */
+function get_funcionarios_plan_nacional_frances() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+a',
+	) );
+	$fra = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$fra = $fra . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $fra;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - informatica.
+ */
+function get_funcionarios_plan_nacional_informatica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Informática',
+	) );
+	$info = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$info = $info . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $info;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Industriales.
+ */
+function get_funcionarios_plan_nacional_industriales() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Industriales',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Educación para la vida cotidiana.
+ */
+function get_funcionarios_plan_nacional_edvida() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Educación para la vida cotidiana
+		',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Educación Fisica.
+ */
+function get_funcionarios_plan_nacional_edfisica() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Educación Física',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - religión.
+ */
+function get_funcionarios_plan_nacional_religion() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Religión',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	wp_reset_postdata();
+	return $a;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Filosofía.
+ */
+function get_funcionarios_plan_nacional_filosofia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Filosofía',
+	) );
+	$a = '';
+	while ( $funcionarios->have_posts() ) :
+		$funcionarios->the_post();
+		// Set variables.
+		$title    = get_the_title();
+		$a = $a . '	<p>' . $title . '</p>';
+	endwhile;
+	return $a;
+}
+
+/**
+ * Gets the lists of funcionarios from a unique category.
+ *
+ * @return string with the list of funcionarios from the plan_nacional - Tecnología.
+ */
+function get_funcionarios_plan_nacional_tecnologia() {
+	$funcionarios = new WP_Query( array(
+		'post_type'      => 'funcionarios',
+		'tag'            => 'Vocacional+Tecnología',
 	) );
 	$a = '';
 	while ( $funcionarios->have_posts() ) :
