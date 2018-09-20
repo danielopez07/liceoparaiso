@@ -2,12 +2,41 @@
  * Custom styles para el index de los clubes.
  */
 
-.lista-clubes{
+.lista-clubes {
 	margin: 1em auto;
 }
 
+.club {
+	background-color: #4472C4;
+	border-radius: 10px;
+	color: #fff;
+}
+.club a {
+	color: #fff;
+}
+.club h3 {
+	margin: 0.5em auto 0;
+	color: #fff;
+	text-align: center;
+}
+
+.img-club {
+	margin: auto;
+	width: 100%;
+	height: auto;
+	border-radius: 0 0 10px 10px;
+}
+
 @media (--wide-menu-query) {
-	.lista-clubes{
-		margin: 1em 4em;
+	.lista-clubes {
+		margin: 1em 2em;
+	}
+
+	.lista-clubes {
+		display: grid;
+		grid-template-columns: repeat(auto-fit,minmax(10em,1fr));
+		grid-auto-flow: dense;
+		grid-gap: 2rem;
+		grid-column: 1;
 	}
 }

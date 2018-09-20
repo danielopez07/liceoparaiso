@@ -6,6 +6,10 @@
 	padding: 0;
 } */
 
+.profesores {
+	padding: 0 1em;
+}
+
 .matricula p, .matricula ul{
 	max-width: 720px;
 	overflow: hidden;
@@ -142,5 +146,8 @@
 	}
 	.imagen-area {
 		background-attachment: fixed;
+	}
+	.profesores {
+		padding: 0 20vw;
 	}
 }

@@ -44,23 +44,22 @@
 		while ( $query->have_posts() ) :
 			$query->the_post();
 			?>
-			<a href="<?php echo esc_html( get_permalink() ); ?>">
-				<?php
-				the_title();
-				echo "<br>";
-				// echo $post->ID;
-				// $image_id = intval( get_post_meta( $post->ID, 'imagen_1', true ) );
-				// if ( $image_id ) {
-				// 	$image = wp_get_attachment_image_src( $image_id, 'medium' );
-				// 	if ( $image ) {
-				// 		return $image[0];
-				// 	}
-				// }
-				// echo "<br>";
-				// the_field( 'imagen_1' );
-				?>
-			</a>
-			<br>
+			<article class="club">
+				<a href="<?php echo esc_html( get_permalink() ); ?>">
+					<?php
+					echo '<h3>';
+					the_title();
+					echo '</h3>';
+					$image_id = intval( get_post_meta( $post->ID, 'imagen_1', true ) );
+					if ( $image_id ) {
+						$image = wp_get_attachment_image_src( $image_id, 'medium' );
+						if ( $image ) {
+							echo '<img class="img-club" src="' . esc_html( $image[0] ) . '">';
+						}
+					}
+					?>
+				</a>
+			</article>
 			<?php
 		endwhile;
 

@@ -35,7 +35,8 @@
 		?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="profesores">
+	<!-- <div class="entry-content"> -->
 		<?php
 		$titulo = get_the_title();
 		if ( 'Diurno' === $titulo ) {
