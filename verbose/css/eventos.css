@@ -22,6 +22,10 @@
 	background-color: #4472C4;
 	border-radius: 10px;
 }
+.post-33:hover {
+	-webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+	        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
 .post-33,
 .post-33 h3 {
 	color: #FFF;
