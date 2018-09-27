@@ -296,6 +296,7 @@ function liceoparaiso_styles() {
 	wp_register_style( 'liceoparaiso-nosotros', get_theme_file_uri( '/css/nosotros.css' ), array(), '20180717' );
 	wp_register_style( 'liceoparaiso-club', get_theme_file_uri( '/css/club.css' ), array(), '20180718' );
 	wp_register_style( 'liceoparaiso-clubes-index', get_theme_file_uri( '/css/clubes-index.css' ), array(), '20180820' );
+	wp_register_style( 'liceoparaiso-biblioteca', get_theme_file_uri( '/css/biblioteca.css' ), array(), '20180926' );
 
 }
 add_action( 'wp_enqueue_scripts', 'liceoparaiso_styles' );

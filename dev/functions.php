@@ -296,6 +296,7 @@ function wprig_styles() {
 	wp_register_style( 'wprig-nosotros', get_theme_file_uri( '/css/nosotros.css' ), array(), '20180717' );
 	wp_register_style( 'wprig-club', get_theme_file_uri( '/css/club.css' ), array(), '20180718' );
 	wp_register_style( 'wprig-clubes-index', get_theme_file_uri( '/css/clubes-index.css' ), array(), '20180820' );
+	wp_register_style( 'wprig-biblioteca', get_theme_file_uri( '/css/biblioteca.css' ), array(), '20180926' );
 
 }
 add_action( 'wp_enqueue_scripts', 'wprig_styles' );

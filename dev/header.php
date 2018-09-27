@@ -51,7 +51,7 @@
 				</div>
 
 				<div id="header-social">
-					<div class="social-navigation"><a href="#"><div class="header-button">Iniciar sesión</div></a></div>
+					<div class="social-navigation"><a href="https://liceodeparaiso.com/liceodigital/login/index.php"><div class="header-button">Iniciar sesión</div></a></div>
 					<div class="social-navigation"><a href="https://es-la.facebook.com/liceoparaiso/" target="blank"><span class="dashicons dashicons-facebook" id="facebook-icon"></span> /liceoparaiso</a></div>
 				</div> <!-- header-social-->
 

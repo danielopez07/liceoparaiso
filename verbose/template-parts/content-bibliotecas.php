@@ -7,6 +7,8 @@
  * @package liceoparaiso
  */
 
+wp_print_styles( array( 'liceoparaiso-biblioteca' ) ); // Note: If this was already done it will be skipped.
+
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
@@ -33,30 +35,93 @@
 	</header><!-- .entry-header -->
 
 	<div class="entry-content">
-		<h3> Historia</h3>
-		<div class="matricula"><p>
-				<?php
-				$value = get_field( 'historia', $post->ID );
-				if ( $value ) {
-					echo $value;
-				}
-				?>
-		</p></div>
-		<div class="galleria-content">
+		<h2>Información general</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'informacion-general', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
+	</div><!-- .entry-content -->
+
+	<div class="entry-content color-fondo">
+		<h2>Misión</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'mision', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
+	</div><!-- .entry-content -->
+
+	<div class="entry-content color-fondo">
+		<h2>Visión</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'vision', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
+	</div><!-- .entry-content -->
+
+	<div class="galleria-content color-fondo">
 		<?php
 			get_galleria( $post->ID );
 		?>
-		</div>
-		<h3> Información de Servicios</h3>
-		<div class="matricula"><p>
-				<?php
-				$value = get_field( 'servicios', $post->ID );
-				if ( $value ) {
-					echo $value;
-				}
-				?>
-		</p></div>
+	</div>
 
+	<div class="entry-content color-fondo">
+		<h2>Horario de atención</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'horario', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
+	</div><!-- .entry-content -->
+
+	<div class="entry-content">
+		<h2>Préstamo de materiales</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'servicios', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
+	</div><!-- .entry-content -->
+
+	<div class="entry-content color-fondo">
+		<h2> Historia</h2>
+		<div class="matricula">
+			<p>
+			<?php
+			$value = get_field( 'historia', $post->ID );
+			if ( $value ) {
+				echo $value;
+			}
+			?>
+			</p>
+		</div>
 	</div><!-- .entry-content -->
 
 </article><!-- #post-<?php the_ID(); ?> -->
