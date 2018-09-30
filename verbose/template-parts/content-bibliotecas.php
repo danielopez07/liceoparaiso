@@ -34,6 +34,13 @@ wp_print_styles( array( 'liceoparaiso-biblioteca' ) ); // Note: If this was alre
 		?>
 	</header><!-- .entry-header -->
 
+	<nav id="nav-biblioteca">
+		<a class="link-nav-biblio" href="#horario-biblioteca">Horario de atención</a>
+		<a class="link-nav-biblio" href="#prestamo-materiales">Préstamo de materiales</a>
+		<a class="link-nav-biblio" href="https://www.facebook.com/bibliotecaliceoparaiso/" target="blank"><span class="dashicons dashicons-facebook" id="facebook-icon"></span>/bibliotecaliceoparaiso</a>
+		<a class="link-nav-biblio" href="https://mep.janium.net/janium-bin/busqueda_rapida.pl?Id=20160526102747" target="blank">Catálogo en línea</a>
+	</nav>
+
 	<div class="entry-content">
 		<h2>Información general</h2>
 		<div class="matricula">
@@ -82,7 +89,7 @@ wp_print_styles( array( 'liceoparaiso-biblioteca' ) ); // Note: If this was alre
 		?>
 	</div>
 
-	<div class="entry-content color-fondo">
+	<div class="entry-content color-fondo" id="horario-biblioteca">
 		<h2>Horario de atención</h2>
 		<div class="matricula">
 			<p>
@@ -96,7 +103,7 @@ wp_print_styles( array( 'liceoparaiso-biblioteca' ) ); // Note: If this was alre
 		</div>
 	</div><!-- .entry-content -->
 
-	<div class="entry-content">
+	<div class="entry-content" id="prestamo-materiales">
 		<h2>Préstamo de materiales</h2>
 		<div class="matricula">
 			<p>
